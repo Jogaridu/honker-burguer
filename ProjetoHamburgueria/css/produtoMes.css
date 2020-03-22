@@ -1,0 +1,104 @@
+/* ============= PROMAÇÃO DO MÊS ============= */
+/* PROM.MES - Destaque do mês */
+#caixaDestaqueDoMes { height: 500px; width: 400px; }
+
+#cardDestaque {
+    height: 440px;
+    width: inherit;
+    background-color: green;
+    border-radius: 20px;
+    border: 1px solid black;
+
+    margin-top: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#coroaImg, #coroaImg img{ height: 50px; width: 120px; }
+
+#lancheImg, #lancheImg img {
+    height: 150px;
+    width: 360px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+#caixaSobreOMes {
+    height: 50px;
+    width: 360px;
+    background-color: white;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#nomeMes, #btnMostrar { display: flex; align-items: center; justify-content: center; }
+
+#nomeMes {
+    height: 50px;
+    width: 310px;
+    float: left;
+    background-color: greenyellow;
+
+}
+
+#btnMostrar {
+    height: 50px;
+    width: 50px;
+    float: left;
+    background-color: gray;
+}
+
+.conteudoSobreOMes { width: 360px; background-color: white; }
+
+/* PROM.MES - Destaques de outros meses */
+#caixaOutrosDestaque {
+    min-height: 500px;
+    height: auto;
+    width: inherit;
+
+    background-color: green;
+    margin-top: 40px;
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+.cardOutroMes {
+    height: 200px;
+    width: 200px;
+
+    margin-bottom: 180px;
+    margin-left: 80px;
+    float: left;
+
+    
+    /* background-color: pink; */
+}
+
+.imgMes, .imgMes img {
+    height: inherit;
+    width: inherit;
+    border-radius: 80px;
+}
+.imgMes img:hover {
+    border-radius: 10px;
+}
+
+.infomacaoEventoMes {
+    min-height: 100px;
+    height: auto;
+    width: 300px;
+
+    margin-left: -50px;
+    position: relative;
+
+    background-color: rgba(226, 227, 222, 0.9);
+    border: 1px solid grey;
+    border-radius: 20px;
+
+}
+
+p {
+    text-indent: 25px;
+    padding: 10px;
+    text-align: justify;
+}

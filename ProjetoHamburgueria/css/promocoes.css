@@ -1,0 +1,88 @@
+/* ============= PROMOÇÕES ============= */
+/* PROMO - Produtos */
+#caixaProdutos {
+    min-height: 300px;
+    height: auto;
+    width: 100%;
+    background-color: lightcoral;
+    overflow: hidden;
+    padding-left: 95px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.produtos {
+    height: 350px;
+    width: 300px;
+    background-color: brown;
+
+    float: left;
+    margin-right: 60px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.imagemProduto {
+    height: 150px;
+    width: 100%;
+
+    background-color: cornflowerblue;
+}
+
+/* PROMO - Caixa de preços */
+.caixaPrecos {
+    height: 100px;
+    width: 70%;
+    background-color: yellow;
+    float: left;
+}
+
+.precoVelho, .precoNovo {
+    height: 30%;
+    width: 100%;
+    /* padding-left: 10px; */
+    box-sizing: border-box;
+}
+.precoVelho {
+    color: red;
+    font-size: 1.3em;
+    background-color: lawngreen;
+}
+
+.precoNovo {
+    height: 70%;
+
+    font-family: "comicBD";
+    font-size: 1.8em;
+    color: rgb(0, 129, 0);
+    background-color: lightblue;
+}
+
+/* PROMO - Botões */
+.caixaBotoes {
+    height: inherit;
+    width: 30%;
+    /* background-color: greenyellow; */
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+
+.btnCurtir {
+    height: 70px;
+    width: 70px;
+    background-image: url("../images/promocoes/btnCurtir.png");
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px black;
+}
+
+.btnCurtir:hover {
+    cursor: pointer;
+    
+}
+
+.caixaAgradecimento {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}

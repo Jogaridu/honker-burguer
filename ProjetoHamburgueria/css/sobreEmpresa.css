@@ -1,0 +1,125 @@
+@media screen and (min-device-width:1300px) {
+    /* ============= Sobre a Empresa ============= */
+    /* SOBRE - Sobre a Empresa */
+    #caixaSobreEmpresa {
+        min-height: 200px;
+        height: auto;
+        width: 85%;
+
+        background-color: red;
+        line-height: 2;
+    }
+
+    /* SOBRE - Historia da Empresa */
+    #caixaLinhaDoTempo {
+        min-height: 200px;
+        height: auto;
+        width: 85%;
+        background-color: blue;
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+
+    #btnLinhaDoTempo {
+        height: 30px;
+        width: 85%;
+
+        background-color: white;
+        padding-top: 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    #caixaConteudoLinhaDoTempo {
+        min-height: 10px;
+        height: auto;
+        width: inherit;
+
+        background-color: lawngreen;
+        overflow: hidden;
+        display: none;
+    }
+
+    .conteudoHistoria {
+        min-height: 50px;
+        height: auto;
+        width: 33%;
+
+        background-color: lightcoral;
+        border-right: 1px solid black;
+        float: left;
+
+        line-height: 1.5;
+    }
+
+    .imagemHistoria, .imagemHistoria img {
+        width: 100%;
+        height: 200px;
+
+        margin: 10px 0px;
+        background-color: lightblue;
+    }
+}
+
+@media screen and (max-device-width:780px) {
+    /* ============= Sobre a Empresa ============= */
+    /* SOBRE - Sobre a Empresa */
+    #caixaSobreEmpresa {
+        min-height: 200px;
+        height: auto;
+        width: 85%;
+
+        background-color: red;
+        line-height: 2;
+    }
+
+    /* SOBRE - Historia da Empresa */
+    #caixaLinhaDoTempo {
+        min-height: 300px;
+        height: auto;
+        width: 85%;
+        background-color: blue;
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+
+    #btnLinhaDoTempo {
+        height: 30px;
+        width: 85%;
+
+        background-color: white;
+        padding-top: 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    #caixaConteudoLinhaDoTempo {
+        min-height: 100px;
+        height: auto;
+        width: inherit;
+
+        background-color: lawngreen;
+        overflow: hidden;
+        display: none;
+    }
+
+    .conteudoHistoria {
+        min-height: 50px;
+        height: auto;
+        width: 100%;
+
+        background-color: lightcoral;
+        border-right: 1px solid black;
+        float: left;
+
+        line-height: 1.5;
+    }
+
+    .imagemHistoria, .imagemHistoria img {
+        width: 100%;
+        height: 200px;
+
+        margin: 10px 0px;
+        background-color: lightblue;
+    }
+}
