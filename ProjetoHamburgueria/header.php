@@ -48,7 +48,7 @@
                     </nav>
 
                     <div id="formLogin">
-                        <form name="loginUsuarioMenu" >
+                        <form name="loginUsuarioMenu">
                             <label id="login" class="formatarTexto">
                                 Usuário <input type="text" name="txtLogin" >
                             </label>

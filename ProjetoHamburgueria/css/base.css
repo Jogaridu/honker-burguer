@@ -4,8 +4,9 @@
 
     @font-face {
         font-family: "comicBD";
-        src: url("../fonts/Comica\ BD\ Bold.ttf");
+        src: url("../fonts/Comica\ BD.ttf");
     }
+
     body {
         background-image: url("../images/imagemBody.jpg");
         background-size: cover;
@@ -35,14 +36,14 @@
     h1, h2, h3 {
         height: 40px;
         width: 100%;
-        background-color: green;
+        /* background-color: green; */
 
         font-family: "comicBD";
         font-size: 25px;
         text-align: center;
     }
 
-    h2, h3 {
+    h2 {
         height: 60px;
         display: flex;
         align-items: center;
@@ -53,8 +54,9 @@
     }
 
     h3 {
-        height: 30px;
-        font-size: 20px;
+        min-height: 30px;
+        height: auto;
+        width: 100%;
         border: none;
     }
 
@@ -155,7 +157,7 @@
         justify-content: center;
     }
 
-    form {
+    #formLogin form {
         display: grid;
         align-items: center;
         grid-template-columns: 130px 130px 30px;
@@ -174,6 +176,7 @@
         width: 130px;
         margin-top: 5px;
         box-shadow: 1px 1px 3px black;
+        color: green;
     }
 
     input[type=submit] {

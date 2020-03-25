@@ -172,9 +172,6 @@
                         <div class="btnDetalhes">Detalhes</div>
                     </div>
 
-                    
-
-                    
                 </div>
 
                 <!-- Rede Sociais -->
@@ -191,6 +188,6 @@
     <?php include_once("footer.php"); ?>
     
     <script src="scripts/jquery-1.11.3.min.js"></script>
-    <script src="scripts/home.js"></script>
+    <script src="scripts/carroussel.js"></script>
 </body>
 </html>

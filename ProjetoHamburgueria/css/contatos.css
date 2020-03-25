@@ -10,21 +10,20 @@
 }
 
 #caixaDadosUsuario, #caixaSugestoes {
-    min-height: 100px;
+    min-height: 160px;
     height: auto;
-    width: 50%;
-    background-color: khaki;
+    width: 49%;
+    /* background-color: red; */
     float: left;
 }
 
 .caixaEntradaDados {
-    min-height: 70;
+    min-height: 70px;
     height: auto;
     width: 310px;
-    /* background-color: magenta; */
+
     text-align: left;
     line-height: 1.5;
-    /* white-space: pre-line; */
     margin-bottom: 50px;
 }
 
@@ -40,6 +39,7 @@
 .caixaEntradaDados input[type=radio] {
     height: 19px;
     width: 19px;
+
     margin-left: 10px;
     cursor: pointer;
 }
@@ -51,6 +51,7 @@
 textarea {
     height: 160px;
     width: 400px;
+    
     resize: none;
     margin-top: 10px;
 }

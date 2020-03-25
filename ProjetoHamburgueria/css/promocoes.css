@@ -1,10 +1,22 @@
+:root {
+    --cor-Primaria: #65bbea;
+    --cor-PrimariaLight: #9bedff;
+    --cor-PrimariaDark: #278bb8;
+    --cor-textoPrimaria: #ffffff;
+
+    --cor-Secundaria: #dfc333;
+    --cor-SecundariaLight: #fff567;
+    --cor-SecundariaDark: #a99300;
+    --cor-textoSecundaria: #000000;
+}
+
 /* ============= PROMOÇÕES ============= */
 /* PROMO - Produtos */
 #caixaProdutos {
     min-height: 300px;
     height: auto;
     width: 100%;
-    background-color: lightcoral;
+    background-color: var(--cor-PrimariaDark);
     overflow: hidden;
     padding-left: 95px;
     padding-bottom: 50px;
@@ -12,72 +24,102 @@
 }
 
 .produtos {
-    height: 350px;
+    height: 330px;
     width: 300px;
-    background-color: brown;
+    background-color: var(--cor-Secundaria);
 
     float: left;
-    margin-right: 60px;
-    box-shadow: 2px 2px 2px black;
+    margin: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+    
+
+
+    box-shadow: 3px 3px 2px black;
+    border-radius: 10px;
+    border: 3px solid #fff;
+}
+
+.imagemProduto, .imagemProduto img {
+    height: 150px;
+    width: 90%;
+
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: var(--cor-SecundariaLight);
 }
 
 .imagemProduto {
-    height: 150px;
-    width: 100%;
+    margin-top: 13px;
+    margin-bottom: 15px;
+}
 
-    background-color: cornflowerblue;
+.nomeLanche {
+    width: 210px;
+    height: 30px;
+    background-color: var(--cor-SecundariaDark);
+    float: left;
+
+    color: var(--cor-textoPrimaria);
+    margin-top: 20px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 /* PROMO - Caixa de preços */
 .caixaPrecos {
-    height: 100px;
-    width: 70%;
-    background-color: yellow;
+    height: 30px;
+    width: 100%;
+    background-color: var(--cor-Secundaria);
     float: left;
+    margin-bottom: 35px;
 }
 
 .precoVelho, .precoNovo {
-    height: 30%;
-    width: 100%;
+    height: inherit;
+    width: 50%;
     /* padding-left: 10px; */
+    /* background-color: violet; */
+    box-sizing: border-box;
+    float: left;
+
+    font-weight: bold;
+    font-size: 1.0em;
+    padding-top: 5px;
     box-sizing: border-box;
 }
+
 .precoVelho {
-    color: red;
-    font-size: 1.3em;
-    background-color: lawngreen;
-}
-
-.precoNovo {
-    height: 70%;
-
-    font-family: "comicBD";
-    font-size: 1.8em;
-    color: rgb(0, 129, 0);
-    background-color: lightblue;
+    border-right: 1px solid #000;
 }
 
 /* PROMO - Botões */
 .caixaBotoes {
-    height: inherit;
-    width: 30%;
+    height: 85px;
+    width: 85px;
     /* background-color: greenyellow; */
+    
     float: left;
     display: flex;
     justify-content: center;
 }
 
-.btnCurtir {
+.btnBurger, .btnBatata {
     height: 70px;
     width: 70px;
-    background-image: url("../images/promocoes/btnCurtir.png");
+    background-image: url("../images/promocoes/burger.png");
     background-size: cover;
-    border-radius: 50%;
-    box-shadow: 2px 2px 2px black;
+    /* background-color: lawngreen; */
+    /* border-radius: 50%; */
 }
 
-.btnCurtir:hover {
+.btnBatata {
+    background-image: url("../images/promocoes/batata.png");
+}
+
+.btnBurger:hover {
     cursor: pointer;
+    height: 85px;
+    width: 85px;
     
 }
 
@@ -86,3 +128,21 @@
     width: 100%;
     background-color: white;
 }
+
+#promocaoBurgers, #promocaoBatatas {
+    min-height: 400px;
+    height: auto;
+    width: 95%;
+    overflow: hidden;
+}
+/* PROMO - CAIXA DE PROMOÇÃO DE HAMBURGER */
+#promocaoBurgers {
+    background-color: dodgerblue;
+}
+/* PROMO - CAIXA DE PROMOÇÃO DE BATATA FRITAS */
+#promocaoBatatas {
+    background-color: goldenrod;
+}
+/* PROMO - CAIXA DE PROMOÇÃO DE BEBIDAS */
+
+/* PROMO - CAIXA DE PROMOÇÃO DE HAMBURGER DOCE */

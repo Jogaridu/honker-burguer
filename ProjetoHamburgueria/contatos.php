@@ -38,7 +38,7 @@
 
                 <div class="caixaEntradaDados">
                     Email
-                    <input type="email" name="txtNome" maxlength="50">
+                    <input type="text" name="txtNome" maxlength="50">
                 </div>
 
                 <div class="caixaEntradaDados">
@@ -59,12 +59,12 @@
                 <h3>Sugestões ou Contatos</h3>
                 <div class="caixaEntradaDados">
                     Home Page
-                    <input type="url" name="txtNome" maxlength="100">
+                    <input type="text" name="txtNome" maxlength="100">
                 </div>
 
                 <div class="caixaEntradaDados">
                     Link Facebook
-                    <input type="url" name="txtNome" maxlength="50">
+                    <input type="text" name="txtNome" maxlength="50">
                 </div>
 
                 <div class="caixaEntradaDados" style="width: 405px">
