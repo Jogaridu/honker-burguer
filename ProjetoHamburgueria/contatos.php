@@ -28,7 +28,7 @@
 
                 <div class="caixaEntradaDados">
                     Telefone
-                    <input type="tel" name="txtTelefone" maxlength="14">
+                    <input type="text" name="txtTelefone" maxlength="14">
                 </div>
 
                 <div class="caixaEntradaDados">
@@ -67,14 +67,19 @@
                     <input type="text" name="txtNome" maxlength="50">
                 </div>
 
-                <div class="caixaEntradaDados" style="width: 405px">
-                    Sugestões/Críticas <div class="caractereRestante">250</div>
-                    <textarea name="txtSugestoes" maxlength="250" placeholder="Sugestões..."></textarea>
+                <div class="caixaEntradaDados">
+                    Tipo de mensagem
+                    <select name="txtTipoMensagem">
+                        <option value="sugestao">Sugestão</option>
+                        <option value="critica">Crítica</option>
+                    </select>
+                    
                 </div>
 
-                <div class="caixaEntradaDados">
-                    Mensagens
-                    <input type="text" name="txtNome">
+                <div class="caixaEntradaDados" style="width: 405px">
+                    Mensagens   <div class="caractereRestante">250</div>
+                    <textarea name="txtSugestoes" maxlength="250" placeholder="Sugestões..."></textarea>
+                    
                 </div>
 
                 <input type="button" value="Enviar">

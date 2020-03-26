@@ -22,15 +22,13 @@
     height: auto;
     width: 310px;
 
+    /* background-color: magenta; */
     text-align: left;
     line-height: 1.5;
     margin-bottom: 50px;
 }
 
-.caixaEntradaDados input[type=text], 
-.caixaEntradaDados input[type=tel],
-.caixaEntradaDados input[type=email]
-.caixaEntradaDados input[type=url] {
+.caixaEntradaDados input[type=text] {
     width: 300px;
     border-radius: 5px;
     margin-top: 5px;
@@ -42,6 +40,12 @@
 
     margin-left: 10px;
     cursor: pointer;
+}
+
+select {
+    width: 310px;
+    /* margin-top: 50px; */
+    box-shadow: 2px 2px 2px black;
 }
 
 .caractereRestante {

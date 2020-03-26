@@ -13,16 +13,15 @@
     
 
     <div id="caixaCuriosidade" class="centralizar">
-        <h1>VOCÊ SABE O QUE É UM HAMBURGUER DE VERDADE?</h1>
         <div class="caixaCentralizaSite">
             <div id="curiosidades">
-                <section class="conteudoCuriosidade fundoInicio">
-                    
+                <section class="conteudoCuriosidade fundoInicio mostrarConteudo">
+                    <h1>BEM VINDO Á</h1>
                 </section>
 
                 <!-- SURGIMENTO DO HAMBURGUER -->
                 <section id="fundoHistoriaHamburguer" class="conteudoCuriosidade ">
-                    <h1 class="formatarTitulo">Surgimento do Hamburguer</h1>
+                    <h1>Surgimento do Hamburguer</h1>
                     <div class="conteudoHistoria">
                         <!-- QUEM INVENTOU O HAMBURGUER? -->
                         <h3>Quem inventou o Hamburguer?</h3>
@@ -83,7 +82,7 @@
                 
                 <!-- MONTAGEM DE NOSSOS HAMBURGUERES -->
                 <section class="conteudoCuriosidade ">
-                    <h1 class="formatarTexto">Montagem de nossos Hamburgueres</h1>
+                    <h1>Montagem de nossos Hamburgueres</h1>
 
                     <div id="caixaCarroussel">
                         <div class="nav back">&laquo;</div>
@@ -138,7 +137,7 @@
 
                 <!-- NIVEL DE SUA FOME -->
                 <section class="conteudoCuriosidade fundoNivelFome">
-                    <h1 class="formatarTitulo ">Qual o nível da sua fome?</h1>
+                    <h1>Qual o nível da sua fome?</h1>
 
                     <div class="conteudoNivelFome textoNivelAlto">
                         <h3>MONSTER TRIPLO CHEDDAR BACON</h3>
@@ -156,16 +155,35 @@
                     </div>
                 </section>
 
-                <section class="conteudoCuriosidade mostrarConteudo">
-                    <h1 class="formatarTexto">Valores Calóricos</h1>
+                <!-- VALORES CALORICOS DO NIVEL DA SUA FOME -->
+                <section class="conteudoCuriosidade">
+                    <h1>Valores Calóricos</h1>
+
+                    <!-- NIVEL ALTO -->
                     <div class="valorCalorico">
                         <h3>Nível Alto</h3>
+                        <figure class="imgNivelFome centralizar">
+                            <img src="images/curiosidade/nivelFomeAlto.jfif" alt="HAMBURGUER NIVEL ALTO CALORICO">
+                        </figure>
+                        <canvas id="graficoNivelAlto"></canvas>
                     </div>
+
+                    <!-- NIVEL MEDIO -->
                     <div class="valorCalorico">
                         <h3>Nível Médio</h3>
+                        <figure class="imgNivelFome centralizar">
+                            <img src="images/curiosidade/nivelFomeMedia.jfif" alt="HAMBURGUER NIVEL MEDIO CALORICO">
+                        </figure>
+                        <canvas id="graficoNivelMedio"></canvas>
                     </div>
+
+                    <!-- NIVEL BAIXO -->
                     <div class="valorCalorico">
                         <h3>Nível Baixo</h3>
+                        <figure class="imgNivelFome centralizar">
+                            <img src="images/curiosidade/nivelFomeBaixo.jfif" alt="HAMBURGUER NIVEL BAIXO CALORICO">
+                        </figure>
+                        <canvas id="graficoNivelBaixo"></canvas>
                     </div>
                 </section>
 
@@ -182,7 +200,7 @@
     </div>
 
     <?php include_once("footer.php"); ?>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/curiosidades.js"></script>
 </body>
