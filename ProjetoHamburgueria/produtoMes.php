@@ -19,73 +19,57 @@
 
             <div id="cardDestaque">
                 <figure id="lancheImg" class="centralizar"> 
-
+                    <img src="images/produtoMes/produtoDoMes.jpg" alt="Imagem Produto do Mês">
                 </figure>
 
-                <h2 class="formatarTexto centralizar">NOME DO LANCHE</h2>
+                <h1 class="centralizar">COMBO FOME NÍVEL ALTO</h1>
 
                 <div id="caixaSobreOMes" class="centralizar">
-                    <div id="nomeMes" class="formatarTexto">Mês de Setembro</div>
-                    <div id="btnMostrar" class="centralizar">Mostrar</div>
+                    <div id="descricaoDoProdutoMes" class="centralizar">
+                        <p id="nomeMes" class="formatarTexto">Mês de Setembro</p>
+                        <div id="btnMostrar" class="centralizar"></div>
+                    </div>
+                    <div class="conteudoSobreDestaqueMes centralizar">
+                        <p class='formatarTexto'> COMBO DO MÊS: Nesse mês de Março teremos uma grande novidade, é 1 BIG HONKER + 1 BATATA GRANDE + 1 LATA + 1 SOBREMESA.  </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div id="caixaOutrosDestaque">
+            <h1>EM BREVE</h1>
+            <!-- MES MAIOR -->
+
+            <div class="flip-box centralizar">
+                <div class="flip-box-inner cover">
+                    <!-- FRENTE -->
+                    <div class="flip-box-front">
+                        <img src="images/produtoMes/imgOutroMes.jpg">
+                    </div>
+
+                    <!-- VERSO -->
+                    <div class="flip-box-back">
+                        <img src="images/logo(3).png">
+                    </div>
                 </div>
             </div>
 
+            <!-- OUTROS MESES PARA ESCOLHER -->
+            <figure class="thumbs">
+                <img src="images/produtoMes/imgOutroMes.jpg">
 
-        </div>
-        <div id="caixaOutrosDestaque">
-            <h1>Outros destaques dos meses</h1>
+                <img src="images/produtoMes/janeiro.jpeg">
 
-            <div class="cardOutroMes">
-                <figure class="imgMes">
-                    <img src="images/produtoMes/imgOutroMes.jpg">
-                </figure>
-            </div>
+                <img src="images/produtoMes/fevereiro.jpg">
 
-            <div class="cardOutroMes">
-                <figure class="imgMes">
-                    <img src="images/produtoMes/imgOutroMes.jpg">
-                </figure>
-            </div>
+                <img src="images/produtoMes/marco.jpg">
 
-            <div class="cardOutroMes">
-                <figure class="imgMes">
-                    <img src="images/produtoMes/imgOutroMes.jpg">
-                </figure>
-            </div>
+                <img src="images/produtoMes/abril.jpg">
 
-            <div class="cardOutroMes">
-                <figure class="imgMes">
-                    <img src="images/produtoMes/imgOutroMes.jpg">
-                </figure>
-            </div>
-
-            <div class="cardOutroMes">
-                <figure class="imgMes">
-                    <img src="images/produtoMes/imgOutroMes.jpg">
-                </figure>
-            </div>
-
-            <div class="cardOutroMes">
-                <figure class="imgMes">
-                    <img src="images/produtoMes/imgOutroMes.jpg">
-                </figure>
-            </div>
-
-            <div class="cardOutroMes">
-                <figure class="imgMes">
-                    <img src="images/produtoMes/imgOutroMes.jpg">
-                </figure>
-            </div>
-
-            <div class="cardOutroMes">
-                <figure class="imgMes">
-                    <img src="images/produtoMes/imgOutroMes.jpg">
-                </figure>
-            </div>
-            
+            </figure>
         </div>
     </div>
-
     <?php include_once("footer.php"); ?>
 
     <script src="scripts/jquery-1.11.3.min.js"></script>

@@ -1,51 +1,42 @@
 $(document).ready(function() {
     const data = new Date();
-    const $btnMostrar = $("#btnMostrar");
+    const $btnMostrar = document.getElementById("btnMostrar");
     const $caixaSobreOMes = $("#caixaSobreOMes");
+    let caixaMostrando = false;
+    let contadorParaConteudo = 0;
 
-    $btnMostrar.click(() => {
+    $("#btnMostrar").click(() => {
     // DESTAQUE
-        if (!$(".conteudoSobreOMes").length) {
-            const $caixaConteudo = document.createElement("div");
-            $caixaConteudo.classList.add("conteudoSobreOMes");
-            
-            $caixaSobreOMes.append($caixaConteudo);
-            
-            $caixaConteudo.innerHTML = " <p class='formatarTexto'> TEXTO TEXTO TEXTO </p>";
-            $(".conteudoSobreOMes").css("height", "200px");
-            $(".conteudoSobreOMes").css("display", "none");
-        }
 
-        $(".conteudoSobreOMes").slideToggle(500);
+        if (caixaMostrando == false) {
+            $("#btnMostrar").css({transform: "rotate(-90deg)"})
+            caixaMostrando = true;
+
+        } else {
+            $("#btnMostrar").css({transform: "rotate(0deg)"})
+            caixaMostrando = false
+
+        }
+        
+        $(".conteudoSobreDestaqueMes").slideToggle(500);
 
     });
 
     // OUTROS DESTAQUES
-    const meses = document.querySelectorAll(".cardOutroMes");
-    const conteudoSobreOMes = [
-    "Mente sã, corpo são. O primeiro mês do ano é um alerta sobre a saúde mental. As ações dessa campanha buscam ressaltar a importância de cuidarmos não só da parte física, mas como emocionais para o melhor equilíbrio e bem-estar."
+    let thumbs = document.querySelector(".thumbs").children;
+    let cover = document.querySelector(".flip-box-front").children[0];
 
-    ]
-
-    meses.forEach((element) => {
+    for (let i=0; i < thumbs.length; i++) {
         
-        element.addEventListener('mouseover', () => {
-            const caixaInfDoMesdocument = document.createElement("div");
-            caixaInfDoMesdocument.classList.add("infomacaoEventoMes");
-            caixaInfDoMesdocument.innerHTML = `<p class='formatarTexto'>${conteudoSobreOMes[0]}</p>`;
-            element.appendChild(caixaInfDoMesdocument);
-
-            $(".infomacaoEventoMes").animate({marginTop: "10px"}, 500);
+        thumbs[i].addEventListener("click", () => {
+            console.log(thumbs[i].getAttribute("src"));
+            cover.setAttribute("src", thumbs[i].getAttribute("src")) 
         });
-
-        element.addEventListener('mouseout', () => {
-            
-            element.removeChild(element.lastChild);
-        });
-    });
+    }
     
     // PEGAR O MÊS
     const monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Outubro", "Novembro", "Dezembro");
     $("#nomeMes").text(`Mês de ${monName[data.getMonth()]}`);
 
+    
 });

@@ -30,35 +30,36 @@
                 <section class="conteudoHistoria">
                     <h3>Criador</h3>
                     <figure class="imagemHistoria">
-
+                        <img src="images/sobreEmpresa/imgCriador.jpg" alt="IMAGEM DO CRIADOR">
                     </figure>
                     <p class="formatarTexto">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam quo, deserunt reiciendis voluptatum vel quidem inventore doloribus obcaecati, maiores dolor pariatur labore quae eligendi hic minima, commodi cumque ipsam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nulla sapiente dolore voluptate exercitationem molestias! Dolore recusandae eligendi fugiat esse. Facilis vel harum numquam odio ad repellendus error deleniti quis?
+                        Dois irmãos, uma barraca de fast food e um sonho. Richard e Maurice Honker revolucionaram a pequena cidade de Arcadia (Califórnia) quando abriram uma lanchonete que vendia hambúrgueres por 10 centavos cada, servidos de minuto a minuto, embrulhados em papel e sem necessidade de garçons: o cliente fazia o pedido diretamente ao cozinheiro. Três anos depois, em 1940, os irmãos Honker transformaram a barraca de comida rápida em um restaurante com cimento, ladeado por um M amarelo de 7,5 metros de altura que não podia ser visto do espaço, mas com certeza a partir de qualquer ponto da cidade.
                     </p>
                 </section>
 
-                <section class="conteudoHistoria">
-                    <h3>Atual</h3>
-                    <p class="formatarTexto">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi ea tempore sunt vel cumque unde iure enim voluptas doloremque sint, corrupti eum qui possimus omnis fugit? Rerum error veritatis sit. Lorem ipsum dolor sit amet 
-                    </p>
-
-                    <figure class="imagemHistoria">
-
-                    </figure>
-
-                    <p class="formatarTexto">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, temporibus at. Molestias, necessitatibus voluptatum omnis totam odio tempora impedit illum nemo nesciunt dolores eveniet cumque recusandae, dolorum, aliquam atque? Quidem.
-                    </p>
-                </section>
                 <section class="conteudoHistoria">
                     <h3>Vinda ao Brasil</h3>
                     <p class="formatarTexto">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, temporibus at. Molestias, necessitatibus voluptatum omnis totam odio tempora impedit illum nemo nesciunt dolores eveniet cumque recusandae, dolorum, aliquam atque? Quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptate ipsam ad impedit quasi sed, tempora eaque error praesentium ex cupiditate eos unde sint quaerat enim laboriosam lorem lorem lorem 
+                        
+                        No Brasil, a rede é operada desde 2007 pela Arcos Dourados, máster franqueada da marca Honker Burguer em toda a América Latina.
                     </p>
 
                     <figure class="imagemHistoria">
 
+                    </figure>
+
+                    <p class="formatarTexto">
+                        O primeiro restaurante do Brasil foi inaugurado em 1979, em Copacabana, Rio de Janeiro. Uma das melhores empresas para trabalhar no Brasil e um dos maiores empregadores de jovens do país, o McDonald’s reforça seu compromisso com a segurança e a saúde do trabalhador e anuncia o apoio ao movimento Abril Verde, iniciativa que ressalta a discussão sobre a segurança e a saúde no ambiente de trabalho.
+                    </p>
+                </section>
+                <section class="conteudoHistoria">
+                    <h3>Atual</h3>
+                    <p class="formatarTexto">
+                        Líder no segmento de serviço rápido de alimentação, o Honker Burguer se destaca pela qualidade dos produtos e do atendimento. O Honker Burguer é a maior e mais conhecida empresa de serviço rápido de alimentação do mundo. Presente em 119 países, a rede possui mais de 36 mil restaurantes, onde trabalham 2 milhões de funcionários que alimentam diariamente mais de 70 milhões de clientes. 
+                    </p>
+
+                    <figure class="imagemHistoria">
+                        <img src="images/sobreEmpresa/imgFachada.jpg" alt="FACHADA HONKER BURGUER">
                     </figure>
                 </section>
             </div>
