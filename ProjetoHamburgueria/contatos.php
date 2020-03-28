@@ -44,9 +44,9 @@
                 <div class="caixaEntradaDados">
                     Sexo:
                     
-                    <input type="radio" name="rdoSexo" value="masc"> MASC
+                    <input type="radio" name="rdoSexo" value="masc"> MASCULINO
 
-                    <input type="radio" name="rdoSexo" value="femi"> FEMI
+                    <input type="radio" name="rdoSexo" value="femi"> FEMININO
                 </div>
 
                 <div class="caixaEntradaDados">

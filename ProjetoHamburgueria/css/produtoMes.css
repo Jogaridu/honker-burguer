@@ -157,6 +157,7 @@
   
   .flip-box-back {
     transform: rotateY(180deg);
+    background-color: rgb(202, 0, 0);
   }
 
   .flip-box-back img, .flip-box-front img{

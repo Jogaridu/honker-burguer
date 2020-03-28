@@ -21,9 +21,8 @@
         </section>
 
         <div id="caixaLinhaDoTempo" class="centralizar">
-            <h2 style="font-weight:bold;">CLIQUE AQUI E VEJA A LINHA DO TEMPO DA HUNKER</h2>
             <div id="btnLinhaDoTempo" class="formatarTexto centralizar">
-                < !!! Linha do tempo !!! >
+                MAIS HISTÓRIA SOBRE A HONKER BURGUER
             </div>
 
             <div id="caixaConteudoLinhaDoTempo" class="centralizar">
@@ -38,14 +37,14 @@
                 </section>
 
                 <section class="conteudoHistoria">
-                    <h3>Vinda ao Brasil</h3>
+                    <h3>No Brasil</h3>
                     <p class="formatarTexto">
                         
                         No Brasil, a rede é operada desde 2007 pela Arcos Dourados, máster franqueada da marca Honker Burguer em toda a América Latina.
                     </p>
 
                     <figure class="imagemHistoria">
-
+                        <img src="images/sobreEmpresa/imgNoBrasil.jpg" alt="IMAGEM COPACABANA">
                     </figure>
 
                     <p class="formatarTexto">

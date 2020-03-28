@@ -1,15 +1,3 @@
-:root {
-    --cor-Primaria: #65bbea;
-    --cor-PrimariaLight: #9bedff;
-    --cor-PrimariaDark: #278bb8;
-    --cor-textoPrimaria: #ffffff;
-
-    --cor-Secundaria: #dfc333;
-    --cor-SecundariaLight: #fff567;
-    --cor-SecundariaDark: #a99300;
-    --cor-textoSecundaria: #000000;
-}
-
 /* ============= PROMOÇÕES ============= */
 /* PROMO - Produtos */
 #caixaProdutos {
@@ -73,7 +61,7 @@
 .caixaPrecos {
     height: 30px;
     width: 100%;
-    background-color: var(--cor-Secundaria);
+    background-color: #dfc333;
     float: left;
     margin-bottom: 35px;
 }
