@@ -16,7 +16,7 @@
     min-height: 300px;
     height: auto;
     width: 100%;
-    background-color: var(--cor-PrimariaDark);
+    /* background-color: white; */
     overflow: hidden;
     padding-left: 95px;
     padding-bottom: 50px;
@@ -26,27 +26,24 @@
 .produtos {
     height: 330px;
     width: 300px;
-    background-color: var(--cor-Secundaria);
+    background-color: #e7ae1f;
 
     float: left;
     margin: 60px;
     margin-right: 20px;
     margin-left: 20px;
-    
 
-
-    box-shadow: 3px 3px 2px black;
+    box-shadow: 3px 3px 15px black;
     border-radius: 10px;
     border: 3px solid #fff;
 }
 
 .imagemProduto, .imagemProduto img {
     height: 150px;
-    width: 90%;
-
+    width: 200px;
     margin: 0 auto;
     border-radius: 10px;
-    background-color: var(--cor-SecundariaLight);
+    
 }
 
 .imagemProduto {
@@ -56,13 +53,20 @@
 
 .nomeLanche {
     width: 210px;
-    height: 30px;
-    background-color: var(--cor-SecundariaDark);
-    float: left;
+    min-height: 30px;
+    height: auto;
+    background-color: #FB9B2B;
 
-    color: var(--cor-textoPrimaria);
+    float: left;
     margin-top: 20px;
+    margin-right: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+
+    box-shadow: 2px 2px 4px black;
     border-radius: 0px 5px 5px 0px;
+    color: white;
+    
 }
 
 /* PROMO - Caixa de preços */
@@ -96,7 +100,6 @@
 .caixaBotoes {
     height: 85px;
     width: 85px;
-    /* background-color: greenyellow; */
     
     float: left;
     display: flex;
@@ -123,26 +126,24 @@
     
 }
 
-.caixaAgradecimento {
-    height: 100px;
-    width: 100%;
-    background-color: white;
-}
 
-#promocaoBurgers, #promocaoBatatas {
+/* PROMO - Caixa de promoções 
+que segura um tipo específico de produto */
+#promocao {
     min-height: 400px;
     height: auto;
     width: 95%;
     overflow: hidden;
-}
-/* PROMO - CAIXA DE PROMOÇÃO DE HAMBURGER */
-#promocaoBurgers {
-    background-color: dodgerblue;
-}
-/* PROMO - CAIXA DE PROMOÇÃO DE BATATA FRITAS */
-#promocaoBatatas {
-    background-color: goldenrod;
-}
-/* PROMO - CAIXA DE PROMOÇÃO DE BEBIDAS */
 
-/* PROMO - CAIXA DE PROMOÇÃO DE HAMBURGER DOCE */
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px rgb(255, 252, 94);
+
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    background-color: rgb(202, 0, 0);
+}
+
+#promocao h1 {
+    color: white;
+}

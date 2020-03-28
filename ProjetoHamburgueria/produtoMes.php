@@ -57,15 +57,15 @@
 
             <!-- OUTROS MESES PARA ESCOLHER -->
             <figure class="thumbs">
-                <img src="images/produtoMes/imgOutroMes.jpg">
+                <img src="images/produtoMes/imgOutroMes.jpg" alt="EM BREVE PRODUTO DO MES">
 
-                <img src="images/produtoMes/janeiro.jpeg">
+                <img src="images/produtoMes/janeiro.jpeg" alt="EM BREVE PRODUTO DO MES">
 
-                <img src="images/produtoMes/fevereiro.jpg">
+                <img src="images/produtoMes/fevereiro.jpg" alt="EM BREVE PRODUTO DO MES">
 
-                <img src="images/produtoMes/marco.jpg">
+                <img src="images/produtoMes/marco.jpg" alt="EM BREVE PRODUTO DO MES">
 
-                <img src="images/produtoMes/abril.jpg">
+                <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
 
             </figure>
         </div>
