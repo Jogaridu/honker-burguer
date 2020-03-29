@@ -43,9 +43,6 @@
                             <img src="images/home/slider03.jpg" alt="Imagem Carroussel 03">
                         </figure>
                     </li>
-                    <!-- <li class="itensCarroussel">4</li> -->
-                    <!-- <li class="itensCarroussel">5</li> -->
-
                 </ul>
                 
                 <div class="nav next">&raquo;</div>
@@ -176,9 +173,9 @@
 
                 <!-- Rede Sociais -->
                 <figure id="caixaRedeSocial">
-                    <img src="images/iconeFacebook.png" alt="FacebokIcone">
-                    <img src="images/iconeInstagram.png" alt="InstagramIcone">
-                    <img src="images/iconeTwitter.png" alt="TwitterIcone">
+                    <img src="images/home/iconeFacebook.png" alt="FacebokIcone">
+                    <img src="images/home/iconeInstagram.png" alt="InstagramIcone">
+                    <img src="images/home/iconeTwitter.png" alt="TwitterIcone">
                 </figure>
             </div>
         </div>

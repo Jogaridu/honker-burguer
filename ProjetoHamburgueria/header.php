@@ -3,7 +3,7 @@
                 <div id="menu">
                     <figure id="logoMenu">
                         <a href="index.php">
-                            <img src="images/logo(3).png" alt="logoEmpresa">
+                            <img src="images/logoEmpresa.png" alt="logoEmpresa">
                         </a>
                     </figure>
 
@@ -29,8 +29,9 @@
                             </li>
 
                             <li class="itemListaMenu formatarTexto">
-                                <!--<a href=""></a>-->
-                                <div class="item">Lojas</div>
+                                <a href="lojas.php">
+                                    <div class="item">Lojas</div>
+                                </a>
                             </li>
 
                             <li class="itemListaMenu formatarTexto">

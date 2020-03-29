@@ -14,7 +14,7 @@
         <div id="caixaDestaqueDoMes" class="centralizar">
 
             <figure id="coroaImg" class="centralizar">
-                <img src="images/imgCoroa.png" alt="Coroa para destaque do mês">
+                <img src="images/produtoMes/imgCoroa.png" alt="Coroa para destaque do mês">
             </figure>
 
             <div id="cardDestaque">
@@ -50,7 +50,7 @@
 
                     <!-- VERSO -->
                     <div class="flip-box-back">
-                        <img src="images/logo(3).png">
+                        <img src="images/logoEmpresa.png">
                     </div>
                 </div>
             </div>
