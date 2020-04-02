@@ -1,63 +1,130 @@
-#formularioContatos {
-    min-height: 500px;
-    height: auto;
-    width: inherit;
-    background-color: #e7ae1f;
-
-    overflow: hidden;
-    border: 3px solid black;
-    border-radius: 20px;
-}
-
-#caixaDadosUsuario, #caixaSugestoes {
-    min-height: 160px;
-    height: auto;
-    width: 49%;
-    /* background-color: red; */
-    float: left;
-    padding-left: 50px;
-    box-sizing: border-box;
-}
-
-.caixaEntradaDados {
-    min-height: 70px;
-    height: auto;
-    width: 310px;
-
-    /* background-color: magenta; */
-    text-align: left;
-    line-height: 1.5;
-    margin-bottom: 50px;
-}
-
-.caixaEntradaDados input[type=text] {
-    width: 300px;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-.caixaEntradaDados input[type=radio] {
-    height: 19px;
-    width: 19px;
-
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-select {
-    width: 310px;
-    /* margin-top: 50px; */
-    box-shadow: 2px 2px 2px black;
-}
-
-.caractereRestante {
-    float: right;
-}
-
-textarea {
-    height: 160px;
-    width: 400px;
+@media screen and (min-device-width:1300px) {
+    #formularioContatos {
+        min-height: 500px;
+        height: auto;
+        width: inherit;
+        background-color: #e7ae1f;
     
-    resize: none;
-    margin-top: 10px;
+        overflow: hidden;
+        border: 3px solid black;
+        border-radius: 20px;
+    }
+    
+    #caixaDadosUsuario, #caixaSugestoes {
+        min-height: 160px;
+        height: auto;
+        width: 49%;
+        /* background-color: red; */
+        float: left;
+        padding-left: 50px;
+        box-sizing: border-box;
+    }
+    
+    .caixaEntradaDados {
+        min-height: 70px;
+        height: auto;
+        width: 310px;
+    
+        /* background-color: magenta; */
+        text-align: left;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+    
+    .caixaEntradaDados input[type=text],
+    .caixaEntradaDados input[type=tel],
+    .caixaEntradaDados input[type=email],
+    .caixaEntradaDados input[type=url] {
+        width: 300px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    
+    .caixaEntradaDados input[type=radio] {
+        height: 19px;
+        width: 19px;
+    
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    
+    select {
+        width: 310px;
+        /* margin-top: 50px; */
+        box-shadow: 2px 2px 2px black;
+    }
+    
+    .caractereRestante {
+        float: right;
+    }
+    
+    textarea {
+        height: 160px;
+        width: 400px;
+        
+        resize: none;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-device-width:780px) {
+    #formularioContatos {
+        min-height: 500px;
+        height: auto;
+        width: 90%;
+        background-color: #e7ae1f;
+    
+        overflow: hidden;
+        border: 3px solid black;
+    }
+    
+    #caixaDadosUsuario, #caixaSugestoes {
+        min-height: 160px;
+        height: auto;
+        width: 100%;
+
+        padding-left: 5px;
+        box-sizing: border-box;
+    }
+    
+    .caixaEntradaDados {
+        min-height: 70px;
+        height: auto;
+        width: 310px;
+    
+        text-align: left;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+    
+    .caixaEntradaDados input[type=text] {
+        width: 300px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    
+    .caixaEntradaDados input[type=radio] {
+        height: 19px;
+        width: 19px;
+    
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    
+    select {
+        width: 310px;
+        box-shadow: 2px 2px 2px black;
+    }
+    
+    .caractereRestante {
+        float: right;
+    }
+    
+    textarea {
+        height: 160px;
+        width: 85%;
+        
+        resize: none;
+        margin-top: 10px;
+    }
 }

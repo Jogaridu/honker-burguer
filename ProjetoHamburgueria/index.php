@@ -22,6 +22,7 @@
         
         <div class="caixaCentralizaSite">
             <div id="caixaCarroussel">
+
                 <div class="nav back">&laquo;</div>
 
                 <ul id="carroussel">
@@ -47,18 +48,27 @@
                 
                 <div class="nav next">&raquo;</div>
             </div>
+            <figure id="imgCabecalhoMobile"></figure>
         </div>
         
         
         <!-- Conteudo -->
         <div id="produtosConteudo" class="centralizar">
             <div class="caixaCentralizaSite">
-                <!-- FILTRO LADO ESQ -->
-                <ul id="listaSelecaoItens">
-                    <li class="formatarTexto">Item 01</li>
-                    <li class="formatarTexto">Item 02</li>
-                </ul>
+                <!-- PRESENTE APENAS NO MOBILE -->
+                <div id="btnMostraLista" class="centralizar">
+                    <ul id="listaSelecaoItensMobile" class="centralizar">
+                        <li class="formatarTexto">Hamburguer</li>
+                        <li class="formatarTexto">Fritas</li>
+                    </ul>
+                </div>
 
+                <!-- FILTRO LADO ESQ -->
+                <ul id="listaSelecaoItens" class="centralizar">
+                    <li class="formatarTexto">Hamburguer</li>
+                    <li class="formatarTexto">Fritas</li>
+                </ul>
+                
                 <!-- CONTEUDOS DE PRODUTOS -->
                 <div id="caixaProdutos">
                     <div class="produtos">
@@ -186,5 +196,6 @@
     
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/carroussel.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 </html>

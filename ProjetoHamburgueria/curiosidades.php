@@ -157,7 +157,7 @@
 
                 <!-- VALORES CALORICOS DO NIVEL DA SUA FOME -->
                 <section class="conteudoCuriosidade">
-                    <h1>Valores Calóricos</h1>
+                    <h1>Valores Calóricos (EM PORCENTAGEM)</h1>
 
                     <!-- NIVEL ALTO -->
                     <div class="valorCalorico">

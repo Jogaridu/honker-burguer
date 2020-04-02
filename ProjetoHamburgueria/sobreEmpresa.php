@@ -32,7 +32,7 @@
                         <img src="images/sobreEmpresa/imgCriador.jpg" alt="IMAGEM DO CRIADOR">
                     </figure>
                     <p class="formatarTexto">
-                        Dois irmãos, uma barraca de fast food e um sonho. Richard e Maurice Honker revolucionaram a pequena cidade de Arcadia (Califórnia) quando abriram uma lanchonete que vendia hambúrgueres por 10 centavos cada, servidos de minuto a minuto, embrulhados em papel e sem necessidade de garçons: o cliente fazia o pedido diretamente ao cozinheiro. Três anos depois, em 1940, os irmãos Honker transformaram a barraca de comida rápida em um restaurante com cimento, ladeado por um M amarelo de 7,5 metros de altura que não podia ser visto do espaço, mas com certeza a partir de qualquer ponto da cidade.
+                    O Sr. Douglas Funny, uma barraca de fast food e um sonho. Douglas Funny revolucionaram a pequena cidade de Arcadia (Califórnia) quando abriram uma lanchonete que vendia hambúrgueres por 10 centavos cada, servidos de minuto a minuto, embrulhados em papel e sem necessidade de garçons: o cliente fazia o pedido diretamente ao cozinheiro. Três anos depois, em 1940, Douglas transformou a barraca de comida rápida em um restaurante com cimento, ladeado com o nome HONKER em amarelo de 7,5 metros de altura que não podia ser visto do espaço, mas com certeza a partir de qualquer ponto da cidade.
                     </p>
                 </section>
 
@@ -48,7 +48,7 @@
                     </figure>
 
                     <p class="formatarTexto">
-                        O primeiro restaurante do Brasil foi inaugurado em 1979, em Copacabana, Rio de Janeiro. Uma das melhores empresas para trabalhar no Brasil e um dos maiores empregadores de jovens do país, o McDonald’s reforça seu compromisso com a segurança e a saúde do trabalhador e anuncia o apoio ao movimento Abril Verde, iniciativa que ressalta a discussão sobre a segurança e a saúde no ambiente de trabalho.
+                        O primeiro restaurante do Brasil foi inaugurado em 1979, em Copacabana, Rio de Janeiro. Uma das melhores empresas para trabalhar no Brasil e um dos maiores empregadores de jovens do país, o Honker Burguer reforça seu compromisso com a segurança e a saúde do trabalhador e anuncia o apoio ao movimento Abril Verde, iniciativa que ressalta a discussão sobre a segurança e a saúde no ambiente de trabalho.
                     </p>
                 </section>
                 <section class="conteudoHistoria">
@@ -65,10 +65,10 @@
         </div>
     </div>
     
-
     <?php include_once("footer.php"); ?>
 
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/sobreEmpresa.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 </html>

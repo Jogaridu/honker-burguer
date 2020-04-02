@@ -1,137 +1,267 @@
-/* ============= PROMOÇÕES ============= */
-/* PROMO - Produtos */
-#caixaProdutos {
-    min-height: 300px;
-    height: auto;
-    width: 100%;
-    /* background-color: white; */
-    overflow: hidden;
-    padding-left: 95px;
-    padding-bottom: 50px;
-    box-sizing: border-box;
+@media screen and (min-device-width:1300px) {
+    /* ============= PROMOÇÕES ============= */
+    /* PROMO - Produtos */
+    #caixaProdutos {
+        min-height: 300px;
+        height: auto;
+        width: 100%;
+        /* background-color: white; */
+        overflow: hidden;
+        padding-left: 95px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+    }
+
+    .produtos {
+        height: 330px;
+        width: 300px;
+        background-color: #e7ae1f;
+
+        float: left;
+        margin: 60px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        box-shadow: 3px 3px 15px black;
+        border-radius: 10px;
+        border: 3px solid #fff;
+    }
+
+    .imagemProduto, .imagemProduto img {
+        height: 150px;
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 10px;
+        
+    }
+
+    .imagemProduto {
+        margin-top: 13px;
+        margin-bottom: 15px;
+    }
+
+    .nomeLanche {
+        width: 210px;
+        min-height: 30px;
+        height: auto;
+        background-color: #FB9B2B;
+
+        float: left;
+        margin-top: 20px;
+        margin-right: 5px;
+        padding-top: 5px;
+        box-sizing: border-box;
+
+        box-shadow: 2px 2px 4px black;
+        border-radius: 0px 5px 5px 0px;
+        color: white;
+        
+    }
+
+    /* PROMO - Caixa de preços */
+    .caixaPrecos {
+        height: 30px;
+        width: 100%;
+        background-color: #dfc333;
+        float: left;
+        margin-bottom: 35px;
+    }
+
+    .precoVelho, .precoNovo {
+        height: inherit;
+        width: 50%;
+
+        box-sizing: border-box;
+        float: left;
+
+        font-weight: bold;
+        font-size: 1.0em;
+        padding-top: 5px;
+        box-sizing: border-box;
+    }
+
+    .precoVelho {
+        border-right: 1px solid #000;
+    }
+
+    /* PROMO - Botões */
+    .caixaBotoes {
+        height: 85px;
+        width: 85px;
+        
+        float: left;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btnBurger, .btnBatata {
+        height: 70px;
+        width: 70px;
+        background-image: url("../images/promocoes/burger.png");
+        background-size: cover;
+    }
+
+    .btnBatata {
+        background-image: url("../images/promocoes/batata.png");
+    }
+
+    .btnBurger:hover {
+        cursor: pointer;
+        height: 85px;
+        width: 85px;
+        
+    }
+
+    /* PROMO - Caixa de promoções 
+    que segura um tipo específico de produto */
+    #promocao {
+        min-height: 400px;
+        height: auto;
+        width: 95%;
+        overflow: hidden;
+
+        border-radius: 30px;
+        box-shadow: 2px 2px 20px rgb(255, 252, 94);
+
+        padding-top: 10px;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+        background-color: rgb(202, 0, 0);
+    }
+
+    #promocao h1 {
+        color: white;
+    }
+
 }
 
-.produtos {
-    height: 330px;
-    width: 300px;
-    background-color: #e7ae1f;
+@media screen and (max-device-width:780px) {
+    h1 {
+        color: white;
+        margin: 30px auto;
+    }
+    /* PROMO - Produtos */
+    #caixaProdutos {
+        min-height: 300px;
+        height: auto;
+        width: 100%;
 
-    float: left;
-    margin: 60px;
-    margin-right: 20px;
-    margin-left: 20px;
+        overflow: hidden;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+    }
 
-    box-shadow: 3px 3px 15px black;
-    border-radius: 10px;
-    border: 3px solid #fff;
-}
+    .produtos {
+        height: 330px;
+        width: 300px;
+        background-color: #e7ae1f;
 
-.imagemProduto, .imagemProduto img {
-    height: 150px;
-    width: 200px;
-    margin: 0 auto;
-    border-radius: 10px;
-    
-}
+        margin: 0px auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        box-shadow: 3px 3px 15px black;
 
-.imagemProduto {
-    margin-top: 13px;
-    margin-bottom: 15px;
-}
+        border-radius: 10px;
+        border: 3px solid #fff;
+    }
 
-.nomeLanche {
-    width: 210px;
-    min-height: 30px;
-    height: auto;
-    background-color: #FB9B2B;
+    .imagemProduto, .imagemProduto img {
+        height: 150px;
+        width: 200px;
 
-    float: left;
-    margin-top: 20px;
-    margin-right: 5px;
-    padding-top: 5px;
-    box-sizing: border-box;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
 
-    box-shadow: 2px 2px 4px black;
-    border-radius: 0px 5px 5px 0px;
-    color: white;
-    
-}
+    .imagemProduto {
+        margin-top: 13px;
+        margin-bottom: 15px;
+    }
 
-/* PROMO - Caixa de preços */
-.caixaPrecos {
-    height: 30px;
-    width: 100%;
-    background-color: #dfc333;
-    float: left;
-    margin-bottom: 35px;
-}
+    .nomeLanche {
+        width: 210px;
+        min-height: 30px;
+        height: auto;
+        background-color: #FB9B2B;
 
-.precoVelho, .precoNovo {
-    height: inherit;
-    width: 50%;
-    /* padding-left: 10px; */
-    /* background-color: violet; */
-    box-sizing: border-box;
-    float: left;
+        float: left;
+        margin-top: 20px;
+        margin-right: 5px;
+        padding-top: 5px;
+        box-sizing: border-box;
 
-    font-weight: bold;
-    font-size: 1.0em;
-    padding-top: 5px;
-    box-sizing: border-box;
-}
+        box-shadow: 2px 2px 4px black;
+        border-radius: 0px 5px 5px 0px;
+        color: white;
+    }
 
-.precoVelho {
-    border-right: 1px solid #000;
-}
+    /* PROMO - Caixa de preços */
+    .caixaPrecos {
+        height: 30px;
+        width: 100%;
+        background-color: #dfc333;
+        float: left;
+        margin-bottom: 35px;
+    }
 
-/* PROMO - Botões */
-.caixaBotoes {
-    height: 85px;
-    width: 85px;
-    
-    float: left;
-    display: flex;
-    justify-content: center;
-}
+    .precoVelho, .precoNovo {
+        height: inherit;
+        width: 50%;
+        
+        box-sizing: border-box;
+        float: left;
 
-.btnBurger, .btnBatata {
-    height: 70px;
-    width: 70px;
-    background-image: url("../images/promocoes/burger.png");
-    background-size: cover;
-    /* background-color: lawngreen; */
-    /* border-radius: 50%; */
-}
+        font-weight: bold;
+        font-size: 1.0em;
+        padding-top: 5px;
+        box-sizing: border-box;
+    }
 
-.btnBatata {
-    background-image: url("../images/promocoes/batata.png");
-}
+    .precoVelho {
+        border-right: 1px solid #000;
+    }
 
-.btnBurger:hover {
-    cursor: pointer;
-    height: 85px;
-    width: 85px;
-    
-}
+    /* PROMO - Botões */
+    .caixaBotoes {
+        height: 85px;
+        width: 85px;
+        
+        float: left;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btnBurger, .btnBatata {
+        height: 70px;
+        width: 70px;
+        background-image: url("../images/promocoes/burger.png");
+        background-size: cover;
+    }
+
+    .btnBatata {
+        background-image: url("../images/promocoes/batata.png");
+    }
 
 
-/* PROMO - Caixa de promoções 
-que segura um tipo específico de produto */
-#promocao {
-    min-height: 400px;
-    height: auto;
-    width: 95%;
-    overflow: hidden;
+    /* PROMO - Caixa de promoções 
+    que segura um tipo específico de produto */
+    #promocao {
+        min-height: 400px;
+        height: auto;
+        width: 90%;
+        overflow: hidden;
 
-    border-radius: 30px;
-    box-shadow: 2px 2px 20px rgb(255, 252, 94);
+        border-radius: 20px;
+        box-shadow: 2px 2px 20px rgb(255, 252, 94);
 
-    padding-top: 10px;
-    box-sizing: border-box;
-    margin-bottom: 50px;
-    background-color: rgb(202, 0, 0);
-}
+        margin: 0px auto;
+        padding-top: 10px;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+        background-color: rgb(202, 0, 0);
+    }
 
-#promocao h1 {
-    color: white;
+    #promocao h1 {
+        color: white;
+    }
 }

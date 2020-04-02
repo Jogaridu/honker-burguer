@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honker Burguer</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
@@ -14,10 +15,22 @@
         <div id="caixaEnderecoLojas">
             <h1>ONDE PODE NOS ENCONTRAR?</h1>
             <ul id="listaEnderecos">
-                <li class="itemListaEnderecos formatarTexto">Av. Luis Carlos Berrini, nº 666.</li>
-                <li class="itemListaEnderecos formatarTexto">Rodovia Raposo Tavares, KM 23,5, Loja 94</li>
-                <li class="itemListaEnderecos formatarTexto">Alameda Grajaú, 61 - Alphaville Industrial</li>
-                <li class="itemListaEnderecos formatarTexto">Av. Dr. Chucri Zaidan, 902, 902</li>
+                <li class="itemListaEnderecos">
+                    <p class="formatarTexto">Av. Luis Carlos Berrini, nº 666</p>
+                    <p class="formatarTexto formatarTelefone">(11)4880-3829</p>
+                </li>
+
+                <li class="itemListaEnderecos">
+                    <p class="formatarTexto">Rodovia Raposo Tavares, KM 23,5, Loja 94 - (11)4880-3829</p>
+                </li>
+
+                <li class="itemListaEnderecos">
+                    <p class="formatarTexto">Alameda Grajaú, 61 - Alphaville Industrial - (11)4880-3829</p>
+                </li>
+
+                <li class="itemListaEnderecos">
+                    <p class="formatarTexto">Av. Dr. Chucri Zaidan, 902, 90 - (11)4880-3829</p>
+                </li>
             </ul>
 
             <div id="caixaMapa">
@@ -28,5 +41,8 @@
         
     </div>
     <?php include_once("footer.php"); ?>
+    
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 </html>

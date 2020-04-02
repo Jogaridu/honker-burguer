@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honker Burguer</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
@@ -12,7 +13,7 @@
 
     <div class="caixaCentralizaSite">
         <div id="caixaDestaqueDoMes" class="centralizar">
-
+            <!-- PRODUTO DESTAQUE DO MES -->
             <figure id="coroaImg" class="centralizar">
                 <img src="images/produtoMes/imgCoroa.png" alt="Coroa para destaque do mês">
             </figure>
@@ -56,23 +57,85 @@
             </div>
 
             <!-- OUTROS MESES PARA ESCOLHER -->
-            <figure class="thumbs">
-                <img src="images/produtoMes/imgOutroMes.jpg" alt="EM BREVE PRODUTO DO MES">
+            <div id="caixaCarroussel">
 
-                <img src="images/produtoMes/janeiro.jpeg" alt="EM BREVE PRODUTO DO MES">
+                <div class="nav back">&laquo;</div>
 
-                <img src="images/produtoMes/fevereiro.jpg" alt="EM BREVE PRODUTO DO MES">
+                <ul id="carroussel">
 
-                <img src="images/produtoMes/marco.jpg" alt="EM BREVE PRODUTO DO MES">
+                    <li class="itensCarroussel">
+                        <figure class="imgCarroussel">
+                            <img src="images/produtoMes/imgOutroMes.jpg" alt="EM BREVE PRODUTO DO MES">
+                        </figure>
+                    </li>
 
-                <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
+                    <li class="itensCarroussel">
+                        <figure class="imgCarroussel">
+                            <img src="images/produtoMes/janeiro.jpeg" alt="EM BREVE PRODUTO DO MES">
+                        </figure>
+                    </li>
 
-            </figure>
+                    <li class="itensCarroussel">
+                        <figure class="imgCarroussel">
+                            <img src="images/produtoMes/fevereiro.jpg" alt="EM BREVE PRODUTO DO MES">
+                        </figure>
+                    </li>
+
+                    <li class="itensCarroussel">
+                        <figure class="imgCarroussel">
+                            <img src="images/produtoMes/marco.jpg" alt="EM BREVE PRODUTO DO MES">
+                        </figure>
+                    </li>
+
+                    <li class="itensCarroussel">
+                        <figure class="imgCarroussel">
+                            <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
+                        </figure>
+                    </li>
+
+                    <li class="itensCarroussel">
+                        <figure class="imgCarroussel">
+                            <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
+                        </figure>
+                    </li>
+                    
+                    <li class="itensCarroussel">
+                        <figure class="imgCarroussel">
+                            <img src="images/produtoMes/maio.jpg" alt="EM BREVE PRODUTO DO MES">
+                        </figure>
+                    </li>
+                    
+                    <li class="itensCarroussel">
+                        <figure class="imgCarroussel">
+                            <img src="images/produtoMes/junho.jpg" alt="EM BREVE PRODUTO DO MES">
+                        </figure>
+                    </li>
+
+                </ul>
+                
+                <div class="nav next">&raquo;</div>
+            </div>
+
+            <!-- MOBILE LISTA DE ITENS -->
+            <div id="caixaItemListaMobile">
+                <figure id="listaItens">
+                    <img src="images/produtoMes/imgOutroMes.jpg" alt="EM BREVE PRODUTO DO MES">
+                    <img src="images/produtoMes/janeiro.jpeg" alt="EM BREVE PRODUTO DO MES">
+                    <img src="images/produtoMes/fevereiro.jpg" alt="EM BREVE PRODUTO DO MES">
+                    <img src="images/produtoMes/marco.jpg" alt="EM BREVE PRODUTO DO MES">
+                    <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
+                    <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
+                    <img src="images/produtoMes/maio.jpg" alt="EM BREVE PRODUTO DO MES">
+                    <img src="images/produtoMes/junho.jpg" alt="EM BREVE PRODUTO DO MES">
+                </figure>
+            </div>
         </div>
     </div>
+
     <?php include_once("footer.php"); ?>
 
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/produtoMes.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 </html>

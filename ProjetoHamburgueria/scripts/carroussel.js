@@ -69,6 +69,4 @@ $(document).ready(function () {
    // Clique do usuário para voltar o Carroussel
    $(".back").click(() => mudaSlide("back"));
 
-   // Intervalo de mudança de slide
-   setInterval(() => mudaSlide("next"), 4000);
 });

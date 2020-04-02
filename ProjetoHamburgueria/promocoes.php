@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Honker Burguer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/promocoes.css">
 </head>
 <body>
     <?php include_once("header.php"); ?>
-    <h1>PROMOÇÕES</h1>
+    
     <div class="caixaCentralizaSite">
+        <h1>PROMOÇÕES</h1>
         <div id="caixaProdutos" class="centralizar">
 
             <div id="promocao">
@@ -128,5 +130,6 @@
 
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/promocoes.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 </html>

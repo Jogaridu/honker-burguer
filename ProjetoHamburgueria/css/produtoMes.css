@@ -1,173 +1,447 @@
-/* ============= PROMAÇÃO DO MÊS ============= */
-/* PROM.MES - Destaque do mês */
-#caixaDestaqueDoMes { height: 500px; width: 400px; margin-top: 40px;}
+@media screen and (min-device-width:1300px) {
+    /* ============= PROMAÇÃO DO MÊS ============= */
+    /* PROM.MES - Destaque do mês */
+    #caixaDestaqueDoMes { height: 500px; width: 400px; margin-top: 40px;}
 
-#cardDestaque {
-    height: 440px;
-    width: inherit;
-    background-color: #e7ae1f;
+    #cardDestaque {
+        height: 440px;
+        width: inherit;
+        background-color: #e7ae1f;
 
-    border-radius: 10px;
-    border: 5px solid rgba(255, 255, 255, 0.37);
-    box-shadow: 4px 4px 100px rgb(255, 252, 94);
+        border-radius: 10px;
+        border: 5px solid rgba(255, 255, 255, 0.37);
+        box-shadow: 4px 4px 100px rgb(255, 252, 94);
 
-    margin-top: 10px;
-    padding-top: 15px;
-    box-sizing: border-box;
-}
+        margin-top: 10px;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
 
 
 
-#coroaImg, #coroaImg img{ height: 50px; width: 120px; }
+    #coroaImg, #coroaImg img{ height: 50px; width: 120px; }
 
-#lancheImg, #lancheImg img {
-    height: 200px;
-    width: 370px;
-    background-color: red;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
+    #lancheImg, #lancheImg img {
+        height: 200px;
+        width: 370px;
+        background-color: red;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
 
-#caixaSobreOMes {
-    height: 50px;
-    width: 360px;
-    /* background-color: white; */
-    margin-top: 20px;
-    text-align: left;
-}
+    #caixaSobreOMes {
+        height: 50px;
+        width: 360px;
+        /* background-color: white; */
+        margin-top: 20px;
+        text-align: left;
+    }
 
-#nomeMes {
-    height: inherit;
-    width: 260px;
-    /* background-color: red; */
-    float: left;
+    #nomeMes {
+        height: inherit;
+        width: 260px;
+        /* background-color: red; */
+        float: left;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-#descricaoDoProdutoMes {
-    height: 50px;
-    width: 310px;
+    #descricaoDoProdutoMes {
+        height: 50px;
+        width: 310px;
+        
+        box-shadow: 2px 2px 10px black;
+        border-radius: 0px;
+        background-color: rgb(202, 0, 0);
+    }
+
+    #btnMostrar {
+        height: 50px;
+        width: 50px;
+        float: left;
+        background-image: url("../images/produtoMes/arrowLeft.png");
+        background-size: cover;
+        transition: 0.4s;
+    }
+
+    .conteudoSobreDestaqueMes {
+        min-height: 1px;
+        height: auto;
+        width: 310px; 
+
+        padding: 10px 0px;
+        box-shadow: 2px 2px 10px black;
+        background-color: rgba(255, 255, 255, 0.637); 
+        display: none;
+        box-sizing: border-box;
+    }
+
+    /* PROM.MES - Destaques de outros meses */
+    #caixaOutrosDestaque {
+        min-height: 500px;
+        height: auto;
+        width: inherit;
+        background-color: rgb(202, 0, 0);
+        
+
+        border-radius: 30px;
+        margin-top: 40px;
+        padding-top: 40px;
+        overflow: hidden;
+    }
+
+    #caixaItemListaMobile {
+        display: none;
+    }
+
+    #caixaCarroussel {
+        height: 100px;
+        width: 90%;
+
+        overflow: hidden;
+        margin: 30px auto; 
+        padding: 2.5px;
+        background-color: #e7ae1f;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px black;
+    }
+
+    #carroussel {
+        height: 100%;
+        width: 95%;
+        float: left;
+        overflow: hidden;
+    }
+
+    .itensCarroussel{
+        height: 100px;
+        width: 170px;
+
+        float: left;
+        margin-right: 50px;
+        margin-left: 50px;
+        cursor: pointer;
+        /* transition: 1s; */
+    }
+
+    .imgCarroussel, .imgCarroussel img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Botoes */
+    .nav {
+        height: inherit;
+        width: 2.5%;
+
+        position: absolute;
+        user-select: none;
+
+        font-size: 2.5em;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+
+        padding-top: 25px;
+        box-sizing: border-box;
+    }
+
+    .nav:hover {
+        transition: 0.2s;
+        cursor: pointer;
+        opacity: 1;
+        background-color: rgb(202, 0, 0);
+    }
+
+    .next {
+        margin-left: 1045px;
+    }
+
+    /* FLIP */
+    .flip-box {
+        background-color: transparent;
+        width: 400px;
+        height: 400px;
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
+        /* background-color: #e7ae1f; */
+        border-radius: 10px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
     
-    box-shadow: 2px 2px 10px black;
-    border-radius: 0px;
-    background-color: rgb(202, 0, 0);
-}
-
-#btnMostrar {
-    height: 50px;
-    width: 50px;
-    float: left;
-    background-image: url("../images/produtoMes/arrowLeft.png");
-    background-size: cover;
-    transition: 0.4s;
-}
-
-.conteudoSobreDestaqueMes {
-    min-height: 1px;
-    height: auto;
-    width: 310px; 
-
-    padding: 10px 0px;
-    box-shadow: 2px 2px 10px black;
-    background-color: rgba(255, 255, 255, 0.637); 
-    display: none;
-    box-sizing: border-box;
-}
-
-/* PROM.MES - Destaques de outros meses */
-#caixaOutrosDestaque {
-    min-height: 500px;
-    height: auto;
-    width: inherit;
-    background-color: rgb(202, 0, 0);
+    .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
     
-
-    border-radius: 30px;
-    margin-top: 40px;
-    padding-top: 40px;
-    overflow: hidden;
-}
-
-.thumbs {
-    height: 100px;
-    width: 90%;
-
-    margin: 30px auto; 
-    padding: 2.5px;
-    background-color: #e7ae1f;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px black;
+    .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+    }
     
-    display: flex;
-    justify-content: center;
+    .flip-box-front, .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    .flip-box-back {
+        transform: rotateY(180deg);
+        background-color: rgb(202, 0, 0);
+    }
+
+    .flip-box-back img, .flip-box-front img{
+        height: 400px;
+        width: 400px;
+        box-shadow: 2px 2px 10px black;
+    }
+
 }
 
-.thumbs img{
-    height: 100px;
-    width: 170px;
+@media screen and (max-device-width:780px)  {
+    /* ============= PROMAÇÃO DO MÊS ============= */
+    /* PROM.MES - Destaque do mês */
+    #caixaDestaqueDoMes { 
+        height: 500px; 
+        width: 100%; 
+        margin-top: 40px;
+    }
 
-    border-radius: 10px;
-    float: left;
-    margin: 10px;
-    margin-top: 0;
+    #cardDestaque {
+        min-height: 440px;
+        height: auto;
+        width: 90%;
+        background-color: #e7ae1f;
 
-    cursor: pointer;
-    /* transition: 1s; */
+        border-radius: 10px;
+        border: 5px solid rgba(255, 255, 255, 0.37);
+        box-shadow: 4px 4px 100px rgb(255, 252, 94);
+
+        margin: 0px auto;
+        margin-top: 10px;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+
+    #coroaImg, #coroaImg img{ 
+        height: 50px; 
+        width: 120px;
+    }
+
+    #lancheImg, #lancheImg img {
+        height: 200px;
+        width: 90%;
+
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    #lancheImg img {
+        width: 100%;
+    }
+
+    #caixaSobreOMes {
+        min-height: 50px;
+        height: auto;
+        width: 90%;
+
+        margin-top: 20px;
+    }
+
+    #nomeMes {
+        height: inherit;
+        width: 80%;
+        float: left;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #btnMostrar {
+        height: inherit;
+        width: 20%;
+        float: left;
+        background-image: url("../images/produtoMes/arrowLeft.png");
+        background-size: cover;
+        transition: 0.4s;
+    }
+
+    #descricaoDoProdutoMes {
+        height: 50px;
+        width: 100%;
+        
+        box-shadow: 2px 2px 10px black;
+        border-radius: 0px;
+        background-color: rgb(202, 0, 0);
+    }
+
+    .conteudoSobreDestaqueMes {
+        min-height: 1px;
+        height: auto;
+        width: 100%; 
+
+        padding: 10px 0px;
+        box-shadow: 2px 2px 10px black;
+        background-color: rgba(255, 255, 255, 0.637); 
+        display: none;
+        box-sizing: border-box;
+    }
+
+    /* PROM.MES - Destaques de outros meses */
+    #caixaOutrosDestaque {
+        min-height: 500px;
+        height: auto;
+        width: inherit;
+        background-color: rgb(202, 0, 0);
+        
+
+        border-radius: 30px;
+        margin-top: 40px;
+        padding-top: 40px;
+        overflow: hidden;
+    }
+
+    #caixaCarroussel, #caixaItemListaMobile {
+        min-height: 100px;
+        height: auto;
+        width: 90%;
+
+        /* overflow: hidden; */
+        margin: 30px auto; 
+        padding: 2.5px;
+        background-color: #e7ae1f;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px black;
+    }
+
+    #listaItens {
+        min-height: 100px;
+        height: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        background-color: green;
+    }
+
+    #listaItens img {
+        height: 100%;
+        width: 40%;
+        margin-right: 10px;
+        float: left;
+    }
+
+    #caixaCarroussel {
+        display: none;
+    }
+
+    #carroussel {
+        height: 100%;
+        width: 100%;
+        float: left;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+
+    .itensCarroussel{
+        height: 100px;
+        width: 17%;
+
+        float: left;
+        margin-right: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+        /* transition: 1s; */
+    }
+
+    .imgCarroussel, .imgCarroussel img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    /* Botoes */
+    .nav {
+        display: none;
+        height: inherit;
+        width: 5%;
+
+        position: absolute;
+        user-select: none;
+
+        font-size: 2.5em;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+
+        padding-top: 25px;
+        box-sizing: border-box;
+    }
+
+    .nav:hover {
+        transition: 0.2s;
+        cursor: pointer;
+        opacity: 1;
+        background-color: rgb(202, 0, 0);
+    }
+
+    .next {
+        right: 0;
+    }
+
+    /* FLIP */
+    .flip-box {
+        background-color: transparent;
+        width: 90%;
+        height: 400px;
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
+        background-color: #e7ae1f;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+    
+    .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-box-front, .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    .flip-box-back {
+        transform: rotateY(180deg);
+        background-color: rgb(202, 0, 0);
+    }
+
+    .flip-box-back img, .flip-box-front img{
+        height: 100%;
+        width: 100%;
+        box-shadow: 2px 2px 10px black;
+    }
 }
-
-.thumbs img:active {
-    background-color: black;
-}
-
-/* FLIP */
-.flip-box {
-    background-color: transparent;
-    width: 400px;
-    height: 400px;
-    perspective: 1000px;
-    -webkit-perspective: 1000px;
-    /* background-color: #e7ae1f; */
-    border-radius: 10px;
-    margin-bottom: 40px;
-    margin-top: 20px;
-  }
-  
-  .flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  .flip-box-back {
-    transform: rotateY(180deg);
-    background-color: rgb(202, 0, 0);
-  }
-
-  .flip-box-back img, .flip-box-front img{
-      height: 400px;
-      width: 400px;
-      box-shadow: 2px 2px 10px black;
-  }
-
-
-
-
-
-
