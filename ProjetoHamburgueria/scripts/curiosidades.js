@@ -1,26 +1,38 @@
 $(document).ready(function() {
     // MUDANÇA DE CONTEUDO
-    const $menu = document.querySelectorAll(".menuCuriosidade li");
-    const $conteudo = document.querySelectorAll("#curiosidades>section");
-    const exibir = (div) => {
-        $conteudo.forEach(div => div.classList.remove("mostrarConteudo"));
+
+    // Funções
+    function trocarConteudo($elemento) {
+        for (let i=0; i <= 4; i++) {
+            $elemento[i].addEventListener("click", function(){
+                exibir ($conteudo[i]);
+                $elemento.forEach(function (Element) { Element.classList.remove("selecionado")});
+                $elemento[i].classList.add("selecionado");
+                });
+        }
+
+    }
+
+    function exibir (div) {
+        $conteudo.forEach(function (div){div.classList.remove("mostrarConteudo")});
         div.classList.add("mostrarConteudo");
     }
 
-    for (let i=0; i <= 4; i++) {
-        $menu[i].addEventListener("click", () => {
-            exibir ($conteudo[i]);
-            $menu.forEach(Element => Element.classList.remove("selecionado"));
-            $menu[i].classList.add("selecionado");
-            });
-    }
+    // - Variáveis declaração - 
+    const $menu = document.querySelectorAll(".menuCuriosidade li");
+    const $menuMobile = document.querySelectorAll(".menuCuriosidadeMobile li")
+
+    const $conteudo = document.querySelectorAll("#curiosidades>section");
+
+    trocarConteudo($menu);
+    trocarConteudo($menuMobile);
 
     // CARROUSSEL
     let numImages = 1;
     let ident = 0;
     let count = $(".itensCarroussel").length - 1;
 
-   const mudaSlide = (option) => {
+   function mudaSlide (option) {
 
        switch(option) {
            case "next":
@@ -59,13 +71,15 @@ $(document).ready(function() {
    let proximoSlide = numImages + $(".itensCarroussel").outerWidth();
    let slideFinalComeco = proximoSlide * ($(".itensCarroussel").length - 1);
    
-   $(".next").click(() => mudaSlide("next"));
+   // Clique do usuário para avançar o Carroussel
+   $(".next").on("click", function() {mudaSlide("next")});
 
-   $(".back").click(() => mudaSlide("back"));
+   // Clique do usuário para voltar o Carroussel
+   $(".back").on("click", function() {mudaSlide("back")});
 
    // GRAFICO
 
-   const graficoPie = (ctx, arrDados) => {
+   function graficoPie (ctx, arrDados) {
         let myPieChart = new Chart(ctx, {
             type: 'pie',
             data: {

@@ -54,7 +54,7 @@
         box-shadow: 2px 2px 2px black;
     }
     
-    .caractereRestante {
+    #caractereRestante {
         float: right;
     }
     
@@ -83,30 +83,33 @@
         height: auto;
         width: 100%;
 
-        padding-left: 5px;
         box-sizing: border-box;
     }
     
     .caixaEntradaDados {
         min-height: 70px;
         height: auto;
-        width: 310px;
-    
+        width: 100%;
+        
         text-align: left;
         line-height: 1.5;
         margin-bottom: 50px;
     }
     
-    .caixaEntradaDados input[type=text] {
-        width: 300px;
+    .caixaEntradaDados input[type=text],
+    .caixaEntradaDados input[type=tel],
+    .caixaEntradaDados input[type=email],
+    .caixaEntradaDados input[type=url] {
+        width: 90%;
         border-radius: 5px;
+        margin: 0px auto;
         margin-top: 5px;
     }
     
     .caixaEntradaDados input[type=radio] {
         height: 19px;
         width: 19px;
-    
+        
         margin-left: 10px;
         cursor: pointer;
     }
@@ -116,7 +119,7 @@
         box-shadow: 2px 2px 2px black;
     }
     
-    .caractereRestante {
+    #caractereRestante {
         float: right;
     }
     

@@ -95,13 +95,13 @@
                         </figure>
                         <div class="caixaSobreProduto formatarTexto">
                             <p>
-                                Nome
+                                Tradicional Honker Burguer
                             </p>
                             <p>
-                                Descrição:
+                                Foi feito para comer
                             </p>
                             <p>
-                                Preço
+                                R$15,99
                             </p>
                         </div>
                         <div class="btnDetalhes">Detalhes</div>
@@ -113,13 +113,13 @@
                         </figure>
                         <div class="caixaSobreProduto formatarTexto">
                             <p>
-                                Nome
+                                Duplo salada
                             </p>
                             <p>
-                                Descrição: Lorem ipsum dolor sit amet consectetur
+                                Duplo sabor com um rúcula íncrivel
                             </p>
                             <p>
-                                Preço
+                                R$5,99
                             </p>
                         </div>
                         <div class="btnDetalhes">Detalhes</div>
@@ -131,13 +131,13 @@
                         </figure>
                         <div class="caixaSobreProduto formatarTexto">
                             <p>
-                                Nome
+                                Burguer Artezanal
                             </p>
                             <p>
-                                Descrição: Lorem ipsum dolor sit amet consectetur
+                                Lanche feito especialmente pelo chef
                             </p>
                             <p>
-                                Preço
+                                R$40,99
                             </p>
                         </div>
                         <div class="btnDetalhes">Detalhes</div>
@@ -149,13 +149,13 @@
                         </figure>
                         <div class="caixaSobreProduto formatarTexto">
                             <p>
-                                Nome
+                                Chips Média
                             </p>
                             <p>
-                                Descrição: Lorem ipsum dolor sit amet consectetur
+                                Chips de batata com o tamanho normal
                             </p>
                             <p>
-                                Preço
+                                R$4,99
                             </p>
                         </div>
                         <div class="btnDetalhes">Detalhes</div>
@@ -167,13 +167,13 @@
                         </figure>
                         <div class="caixaSobreProduto formatarTexto">
                             <p>
-                                Nome
+                                Hamburguer doce
                             </p>
                             <p>
-                                Descrição: Lorem ipsum dolor sit amet consectetur
+                                Diferencial da casa com sabores inovadores para um sanduiche
                             </p>
                             <p>
-                                Preço
+                                R$29,99
                             </p>
                         </div>
                         <div class="btnDetalhes">Detalhes</div>

@@ -45,14 +45,14 @@
             <div class="flip-box centralizar">
                 <div class="flip-box-inner cover">
                     <!-- FRENTE -->
-                    <div class="flip-box-front">
-                        <img src="images/produtoMes/imgOutroMes.jpg">
-                    </div>
+                    <figure class="flip-box-front">
+                        <img src="images/produtoMes/Dezembro.jpg" alt="Frente do produtos">
+                    </figure>
 
                     <!-- VERSO -->
-                    <div class="flip-box-back">
-                        <img src="images/logoEmpresa.png">
-                    </div>
+                    <figure class="flip-box-back">
+                        <img src="images/logoEmpresa.png" alt="Verso logo de empresa">
+                    </figure>
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
 
                     <li class="itensCarroussel">
                         <figure class="imgCarroussel">
-                            <img src="images/produtoMes/imgOutroMes.jpg" alt="EM BREVE PRODUTO DO MES">
+                            <img src="images/produtoMes/Dezembro.jpg" alt="EM BREVE PRODUTO DO MES">
                         </figure>
                     </li>
 
@@ -89,28 +89,15 @@
 
                     <li class="itensCarroussel">
                         <figure class="imgCarroussel">
-                            <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
-                        </figure>
-                    </li>
-
-                    <li class="itensCarroussel">
-                        <figure class="imgCarroussel">
-                            <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
-                        </figure>
-                    </li>
-                    
-                    <li class="itensCarroussel">
-                        <figure class="imgCarroussel">
                             <img src="images/produtoMes/maio.jpg" alt="EM BREVE PRODUTO DO MES">
                         </figure>
                     </li>
-                    
+
                     <li class="itensCarroussel">
                         <figure class="imgCarroussel">
                             <img src="images/produtoMes/junho.jpg" alt="EM BREVE PRODUTO DO MES">
                         </figure>
                     </li>
-
                 </ul>
                 
                 <div class="nav next">&raquo;</div>
@@ -124,9 +111,6 @@
                     <img src="images/produtoMes/fevereiro.jpg" alt="EM BREVE PRODUTO DO MES">
                     <img src="images/produtoMes/marco.jpg" alt="EM BREVE PRODUTO DO MES">
                     <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
-                    <img src="images/produtoMes/abril.jpg" alt="EM BREVE PRODUTO DO MES">
-                    <img src="images/produtoMes/maio.jpg" alt="EM BREVE PRODUTO DO MES">
-                    <img src="images/produtoMes/junho.jpg" alt="EM BREVE PRODUTO DO MES">
                 </figure>
             </div>
         </div>

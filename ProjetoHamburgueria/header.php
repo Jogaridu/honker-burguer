@@ -1,5 +1,5 @@
 <?='<header>
-            <div class="caixaCentralizaMenu">
+            <div id="caixaCentralizaHeaderFooter">
                 <!-- MENU DESKTOP -->
                 <div id="menu" class="centralizar">
                     <figure id="logoMenu">
@@ -9,7 +9,7 @@
                     </figure>
 
                     <nav>
-                        <ul id="listaMenu">
+                        <ul class="listaMenu">
 
                             <li class="itemListaMenu formatarTexto">
                                 <a href="curiosidades.php">
@@ -19,7 +19,7 @@
 
                             <li class="itemListaMenu formatarTexto">
                                 <a href="produtoMes.php">
-                                    <div class="item">Produto do mês</div>
+                                    <div class="item">Destaque</div>
                                 </a>
                             </li>
 
@@ -52,11 +52,11 @@
                     <div id="formLogin">
                         <form name="loginUsuarioMenu">
                             <label id="login" class="formatarTexto">
-                                Usuário <input type="text" name="txtLogin" >
+                                Usuário <input type="text" name="txtLogin" maxlength="20">
                             </label>
 
                             <label id="senha" class="formatarTexto">
-                                Senha <input type="text" name="txtSenha" >
+                                Senha <input type="password" name="txtSenha">
                             </label>
 
                             <div id="btnSubmit">
@@ -72,7 +72,7 @@
                     
                     </div>
                     <div id="menuMobile">
-                        <ul id="listaMenu">
+                        <ul class="listaMenu">
                             <li class="itemListaMenu formatarTexto">
                                 <a href="index.php">
                                     <div class="item">Home</div>

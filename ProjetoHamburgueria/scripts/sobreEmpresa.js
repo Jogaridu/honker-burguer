@@ -8,12 +8,12 @@ $(document).ready(function() {
             conteudoMostrado = true    
 
         } else {
-            $("#btnLinhaDoTempo").animate({"width": "75%", "borderRadius": "10px", "marginBottom": "0px"}, 500);
-            $("#caixaConteudoLinhaDoTempo").animate({"width": "75%"}, 500)
+            $("#btnLinhaDoTempo").animate({"width": "85%", "borderRadius": "10px", "marginBottom": "0px"}, 500);
+            $("#caixaConteudoLinhaDoTempo").animate({"width": "85%"}, 500)
             conteudoMostrado = false
         }
         
-        $("#caixaConteudoLinhaDoTempo").slideToggle(1500);
+        $("#caixaConteudoLinhaDoTempo").slideToggle(500);
 
     });
     

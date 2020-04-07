@@ -16,7 +16,7 @@
         <section id="caixaSobreEmpresa" class="centralizar">
             <h2>Sobre a Empresa</h2>
             <p class="formatarTexto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, eligendi excepturi placeat rem, ipsum iure quod quidem sint earum facilis ut ab nihil. Cum dolorum fuga harum vitae, mollitia reiciendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem officiis possimus eum aliquid maiores quisquam ullam reprehenderit labore corrupti ducimus itaque expedita, consectetur eius libero rem quidem. Consequatur, nisi iste.
+            Somos uma empresa orgulhosamente mineira de produtos alimentícios que atende às diferentes necessidades de cada região do Brasil. A Alimenta conquistou sua reputação por entregar produtos de qualidade, trabalhar com integridade e respeitar seus colaboradores e parceiros de negócio.
             </p>
         </section>
 

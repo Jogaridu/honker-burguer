@@ -1,6 +1,6 @@
 <?= '
 <footer>
-<div class="caixaCentralizaSite">
+<div class="caixaCentralizaHeaderFooter">
     <div id="rodape">
         <div id="btnSistemaInterno" class="formatarTitulo">
             Sistema Interno
@@ -16,7 +16,18 @@
                 Baixe o App
             </div>
         </div>
+
+        <!-- RODAPE MOBILE -->
+        <div id="caixaRedeSociaisMobile">
+            <figure id="redeSociaisRodape">
+                <img src="images/home/iconeFacebook.png" alt="FacebokIcone">
+                <img src="images/home/iconeInstagram.png" alt="InstagramIcone">
+                <img src="images/home/iconeTwitter.png" alt="TwitterIcone">
+            </figure>
+        </div>
     </div>
+
+    
 </div>
 </footer>
 

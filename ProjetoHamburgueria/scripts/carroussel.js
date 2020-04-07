@@ -16,7 +16,7 @@ $(document).ready(function () {
    // Funções
    
    // Função que muda de slide. Parâmetros são "next" ou "back"
-   const mudaSlide = (option) => {
+   function mudaSlide (option) {
 
        switch(option) {
 
@@ -64,9 +64,10 @@ $(document).ready(function () {
    let slideFinalComeco = proximoSlide * ($(".itensCarroussel").length - 1);
    
    // Clique do usuário para avançar o Carroussel
-   $(".next").click(() => mudaSlide("next"));
+   $(".next").on("click", function() {mudaSlide("next")});
 
    // Clique do usuário para voltar o Carroussel
-   $(".back").click(() => mudaSlide("back"));
+   $(".back").on("click", function() {mudaSlide("back")});
 
+   setInterval(function() {mudaSlide("next")}, 10000);
 });

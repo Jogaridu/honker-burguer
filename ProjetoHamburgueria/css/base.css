@@ -10,15 +10,14 @@
         background-size: cover;
     }
 
-    .caixaCentralizaSite {
+    .caixaCentralizaSite, #caixaCentralizaHeaderFooter {
         min-height: inherit;
         height: auto;
         width: 1200px;
 
         margin: 0px auto;
-        /* background-color: rebeccapurple; */
-        overflow: hidden;
-    }
+        overflow: hidden;}
+    
 
     .formatarTexto {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -114,7 +113,7 @@
         /* background-color: green; */
     }
 
-    #listaMenu {
+    .listaMenu {
         height: inherit;
         width: inherit;
         /* background-color: fuchsia; */
@@ -186,7 +185,8 @@
         float: left;
     }
 
-    input[type=text] {
+    input[type=text],
+    input[type=password] {
         height: 20px;
         width: 160px;
         margin-top: 5px;
@@ -202,31 +202,34 @@
     footer {
         width: 100%;
         height: 150px;
-        
     }
 
     #rodape {
         height: 150px;
-        width: inherit;
-        
-        display: grid;
-        justify-content: space-around;
-        align-items: center;
-        grid-template-columns: 200px 600px 230px;
+        width: 1200px;
+        margin: 0px auto;
         background-image: url("../images/imagemFooter.jpg");
+
+        padding-left: 50px;
+        padding-top: 10px;
+        box-sizing: border-box;
     }
 
     /* RODAPE - Formulário */
     #btnSistemaInterno {
         height: 60px;
+        width: 200px;
         
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+        text-align: center;
         border: 1px solid black;
         border-radius: 10px;
         background-color: #ffffff;
+
+        float: left;
+        padding-top: 20px;
+        margin-right: 35px;
+        margin-top: 35px;
+        box-sizing: border-box;
     }
 
     #btnSistemaInterno:hover {
@@ -238,47 +241,56 @@
     /* RODAPE - Endereco */
     #endereco {
         height: 100px;
-        
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+        width: 600px;
 
-        border-radius: 10px;
+        /* background-color: white; */
+        text-align: center;
+
+        float: left;
+        padding-top: 75px;
+        margin-right: 50px;
+        margin-top: 30px;
+        box-sizing: border-box;
+        
     }
 
     #endereco p {
-        color: #ffffff;
+        color: #fff;
     }
 
     /* RODAPE - Aplicativo Mobile */
     #aplicativoMobile {
         height: 130px;
+        width: 230px;
         background-color: #ffffff;
-
-        display: grid;
-        align-items: center;
-        justify-content: center;
-
-        grid-template-columns: 60px 120px;
-        grid-gap: 10px;
         border-radius: 10px;
+
+        float: left;
+        padding-left: 20px;
+        padding-top: 30px;
+        box-sizing: border-box;
     }
 
     #imgApp, #imgApp img {
         height: 70px;
         width: 60px;
+        float: left;
+        margin-right: 10px;
     }
 
     #btnBaixaApp {
         height: 55px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 120px;
+        background-color: #ffffff;
 
         border: 2px solid black;
         border-radius: 10px;
-        background-color: #ffffff;
+        text-align: center;
+
+        float: left;
+        padding-top: 16px;
+        margin-top: 8px;
+        box-sizing: border-box;
     }
 
     #btnBaixaApp:hover {
@@ -286,7 +298,13 @@
         font-size: 1.2em;
     }
 
+    /* RODAPE MOBILE DESABILITANDO */
+    #caixaRedeSociaisMobile {
+        display: none;
+    }
+
 }
+
 
 @media screen and (max-device-width:780px) {
 
@@ -327,7 +345,8 @@
     }
 
     h1, h2, h3 {
-        height: 40px;
+        min-height: 40px;
+        height: auto;
         width: 100%;
 
         font-family: "comicBD";
@@ -345,7 +364,6 @@
 
     h3 {
         min-height: 30px;
-        height: auto;
         width: 100%;
         border: none;
     }
@@ -375,6 +393,7 @@
         width: 130px;
         height: 130px;
         position: fixed;
+        z-index: 999;
     }
 
     /* MENU DESKTOP */
@@ -396,12 +415,11 @@
         height: 100%;
         background-color: rgba(202,0,0,0.8);
         position: fixed;
-        z-index: 9999;
         display: none;
         top: 0;
     }
 
-    #listaMenu {
+    .listaMenu {
         min-height: 300px;
         width: inherit;
         padding-top: 50px;
@@ -473,6 +491,22 @@
     /* RODAPE - Aplicativo Mobile DESABILITANDO*/
     #aplicativoMobile {
         display: none;
+    }
+
+    #caixaRedeSociaisMobile {
+        height: 120px;
+        width: 40px;
+        
+        float: right;
+    }
+
+    #redeSociaisRodape, #redeSociaisRodape img {
+        height: inherit;
+        width: inherit;
+    }
+
+    #redeSociaisRodape img {
+        height: 40px;
     }
 
 }

@@ -1,9 +1,7 @@
 $(document).ready(function() {
     const data = new Date();
-    // const $btnMostrar = document.getElementById("btnMostrar");
-    // const $caixaSobreOMes = $("#caixaSobreOMes");
     let caixaMostrando = false;
-    // let contadorParaConteudo = 0;
+    
 
     $("#btnMostrar").click(() => {
     // DESTAQUE
@@ -22,17 +20,23 @@ $(document).ready(function() {
 
     });
 
-    // OUTROS DESTAQUES
-    let thumbs = document.querySelectorAll(".imgCarroussel img");
+    function galeriaDeImagens ($elementoChild) {
+        let thumbs = document.querySelectorAll($elementoChild);
 
-    let cover = document.querySelector(".flip-box-front").children[0];
-    for (let i=0; i < thumbs.length; i++) {
+        let cover = document.querySelector(".flip-box-front").children[0];
+        for (let i=0; i < thumbs.length; i++) {
         
         thumbs[i].addEventListener("click", () => {
-            console.log(thumbs[i].getAttribute("src"));
-            cover.setAttribute("src", thumbs[i].getAttribute("src")) 
-        });
+            cover.setAttribute("src", thumbs[i].getAttribute("src"));
+            });
+        }
     }
+
+    // OUTROS DESTAQUES
+    galeriaDeImagens(".imgCarroussel img");
+
+    // Mobile
+    galeriaDeImagens("#listaItens img");
     
     // PEGAR O MÊS
     const monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Outubro", "Novembro", "Dezembro");
@@ -58,9 +62,6 @@ $(document).ready(function() {
                     ident++;
                     $("#carroussel").animate({'marginLeft':"-=" + proximoSlide + 'px'}, 500)
         
-                } else {
-                    ident = 0;
-                    $("#carroussel").animate({'marginLeft':"+=" + slideFinalComeco + 'px'}, 500)
                 }
                 break;
         
@@ -70,9 +71,6 @@ $(document).ready(function() {
                     ident--;
                     $("#carroussel").animate({'marginLeft':"+=" + proximoSlide + 'px'}, 500)
         
-                } else {
-                    ident = ($(".itensCarroussel").length - 1);
-                    $("#carroussel").animate({'marginLeft':"-=" + slideFinalComeco + 'px'}, 500)
                 }
                 break;
 
@@ -92,10 +90,11 @@ $(document).ready(function() {
     $("#carroussel").css("width", width);
     
     let proximoSlide = (numImages * marginPadding) + ($(".itensCarroussel").outerWidth() * numImages);
-    let slideFinalComeco = proximoSlide * count;
 
-    $(".next").click(() => mudaSlide("next"));
+    // Clique do usuário para avançar o Carroussel
+   $(".next").on("click", function() {mudaSlide("next")});
 
-    $(".back").click(() => mudaSlide("back"));
+   // Clique do usuário para voltar o Carroussel
+   $(".back").on("click", function() {mudaSlide("back")});
 
 });

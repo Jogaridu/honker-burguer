@@ -267,9 +267,10 @@
     }
 
     #btnMostrar {
-        height: inherit;
-        width: 20%;
+        height: 50px;
+        width: 50px;
         float: left;
+
         background-image: url("../images/produtoMes/arrowLeft.png");
         background-size: cover;
         transition: 0.4s;
@@ -303,7 +304,6 @@
         width: inherit;
         background-color: rgb(202, 0, 0);
         
-
         border-radius: 30px;
         margin-top: 40px;
         padding-top: 40px;
@@ -315,7 +315,6 @@
         height: auto;
         width: 90%;
 
-        /* overflow: hidden; */
         margin: 30px auto; 
         padding: 2.5px;
         background-color: #e7ae1f;
@@ -330,16 +329,18 @@
         overflow-y: hidden;
 
         display: flex;
-        justify-content: center;
-
+        flex-direction: row;
         width: 100%;
-        background-color: green;
     }
 
     #listaItens img {
-        height: 100%;
-        width: 40%;
-        margin-right: 10px;
+        height: 90px;
+        width: 90px;
+        border-radius: 10px;
+
+        margin-top: 5px;
+        margin-right: 20px;
+        margin-left: 20px;
         float: left;
     }
 

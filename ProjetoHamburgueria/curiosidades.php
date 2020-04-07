@@ -14,6 +14,12 @@
 
     <div id="caixaCuriosidade" class="centralizar">
         <div class="caixaCentralizaSite">
+            <!-- Menu mobile -->
+            <ul class="menuCuriosidadeMobile">
+                <li class="formatarTexto selecionado">INICIO</li>
+                <li class="formatarTexto">ORIGEM</li>
+            </ul>
+
             <div id="curiosidades">
                 <section class="conteudoCuriosidade fundoInicio mostrarConteudo">
                     <h1>BEM VINDO Á</h1>
@@ -140,7 +146,7 @@
                     <h1>Qual o nível da sua fome?</h1>
 
                     <div class="conteudoNivelFome textoNivelAlto">
-                        <h3>MONSTER TRIPLO CHEDDAR BACON</h3>
+                        <h3>TRIPLO CHEDDAR BACON</h3>
                         <p class="formatarTexto ">Se você está na correria do dia a dia paulistano e não comeu aquele rango ainda, experimente nosso lanche nível alto. <!-- São três camadas para suprir as suas três refeições do dia em uma única mordida.--></p> 
                     </div>
 
@@ -158,37 +164,38 @@
                 <!-- VALORES CALORICOS DO NIVEL DA SUA FOME -->
                 <section class="conteudoCuriosidade">
                     <h1>Valores Calóricos (EM PORCENTAGEM)</h1>
+                    <div id="caixaGraficoCalorico">
+                        <!-- NIVEL ALTO -->
+                        <div class="valorCalorico">
+                            <h3>Nível Alto</h3>
+                            <figure class="imgNivelFome centralizar">
+                                <img src="images/curiosidade/nivelFomeAlto.jfif" alt="HAMBURGUER NIVEL ALTO CALORICO">
+                            </figure>
+                            <canvas id="graficoNivelAlto"></canvas>
+                        </div>
 
-                    <!-- NIVEL ALTO -->
-                    <div class="valorCalorico">
-                        <h3>Nível Alto</h3>
-                        <figure class="imgNivelFome centralizar">
-                            <img src="images/curiosidade/nivelFomeAlto.jfif" alt="HAMBURGUER NIVEL ALTO CALORICO">
-                        </figure>
-                        <canvas id="graficoNivelAlto"></canvas>
-                    </div>
+                        <!-- NIVEL MEDIO -->
+                        <div class="valorCalorico">
+                            <h3>Nível Médio</h3>
+                            <figure class="imgNivelFome centralizar">
+                                <img src="images/curiosidade/nivelFomeMedia.jfif" alt="HAMBURGUER NIVEL MEDIO CALORICO">
+                            </figure>
+                            <canvas id="graficoNivelMedio"></canvas>
+                        </div>
 
-                    <!-- NIVEL MEDIO -->
-                    <div class="valorCalorico">
-                        <h3>Nível Médio</h3>
-                        <figure class="imgNivelFome centralizar">
-                            <img src="images/curiosidade/nivelFomeMedia.jfif" alt="HAMBURGUER NIVEL MEDIO CALORICO">
-                        </figure>
-                        <canvas id="graficoNivelMedio"></canvas>
-                    </div>
-
-                    <!-- NIVEL BAIXO -->
-                    <div class="valorCalorico">
-                        <h3>Nível Baixo</h3>
-                        <figure class="imgNivelFome centralizar">
-                            <img src="images/curiosidade/nivelFomeBaixo.jfif" alt="HAMBURGUER NIVEL BAIXO CALORICO">
-                        </figure>
-                        <canvas id="graficoNivelBaixo"></canvas>
+                        <!-- NIVEL BAIXO -->
+                        <div class="valorCalorico">
+                            <h3>Nível Baixo</h3>
+                            <figure class="imgNivelFome centralizar">
+                                <img src="images/curiosidade/nivelFomeBaixo.jfif" alt="HAMBURGUER NIVEL BAIXO CALORICO">
+                            </figure>
+                            <canvas id="graficoNivelBaixo"></canvas>
+                        </div>
                     </div>
                 </section>
 
+                <!-- MENU NO DESKTOP -->
                 <ul class="menuCuriosidade">
-                    
                     <li class="formatarTexto selecionado">INICIO</li>
                     <li class="formatarTexto">ORIGEM</li>
                     <li class="formatarTexto">MONTAGEM</li>
@@ -196,12 +203,21 @@
                     <li class="formatarTexto">VALOR CALORICO</li>
                 </ul>
             </div>
+            
+            <!-- Menu mobile -->
+            <ul class="menuCuriosidadeMobile">
+                <li class="formatarTexto">MONTAGEM</li>
+                <li class="formatarTexto">NÍVEL DE FOME</li>
+                <li class="formatarTexto">VALOR CALORICO</li>
+            </ul>
         </div>
     </div>
 
     <?php include_once("footer.php"); ?>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/curiosidades.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 </html>
