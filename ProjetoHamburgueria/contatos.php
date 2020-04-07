@@ -1,3 +1,45 @@
+<?php
+require_once('bd/conexao.php');
+
+//Abre a conexão com o BD
+$conex = conexaoMysql();
+
+//Valida se o formulário foi submetido pelo usuário
+if(isset($_POST['btnEnviar']))
+{
+    //Resgatando os dados fornecidos pelo usuário, utilizando o metodo POST
+    $nome = $_POST['txtNome'];
+    $telefone = $_POST['txtTelefone'];
+    $celular = $_POST['txtCelular'];
+    $email = $_POST['txtEmail'];
+    $profissao = $_POST['txtProfissao'];
+    $sexo = $_POST['rdoSexo'];
+    $homePage = $_POST['txtHomePage'];
+    $link = $_POST['txtLink'];
+    $classificacao = $_POST['sltClassificacao'];
+    $mensagem = $_POST['txtMensagem'];
+    
+    $sql = "insert into tblContatosSite
+    
+            (
+                   nome, telefone, celular, email, profissao, sexo, homepage, link,
+                   classificacao, mensagem
+            )
+            values 
+            (      
+                '".$nome."', '".$telefone."', '".$celular."', '".$email."', '".$profissao."', '".$sexo."', '".$homePage."', '".$link."', '".$classificacao."', '".$mensagem."'
+            )";
+
+    
+ 
+    if(mysqli_query($conex, $sql))
+        echo("<script>alert('Registro inserido com sucesso!')</script>");
+    else
+        echo("<script>alert('Erro ao escutar o script!')</script>");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -82,7 +124,7 @@
                     <textarea name="txtMensagem" cols="30" rows="10" maxlength="250" placeholder="Insira sua mensagem aqui..." required></textarea>
                 </div>
 
-                <input name="txtSalvar" name="btnSalvar" type="submit" value="Enviar">
+                <input name="btnEnviar" type="submit" value="Enviar">
             </div>
             
         </form>
