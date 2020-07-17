@@ -68,6 +68,7 @@
 
 ?>
 <script async src="js/mascaras.js"></script>
+<script src="js/redirecionementoDelete.js"></script>
 <script>
 
     $(document).ready(function () {
@@ -121,7 +122,7 @@
     }
 
 </script>
-<div id="teste"></div>
+
 <!-- FORMULARIO SOBRE O TITULO DA SEÇÃO -->
 <form action="<?=$actionTitulo?>" method="post" id="frmTitulo" class="formularioConteudos" enctype="multipart/form-data">
     <h2>Formulário de Título</h2>
@@ -246,8 +247,7 @@
                     </figure>
                 </a>
 
-                <a onclick="return confirm('Deseja realmente excluir o registro?')" 
-                href="bd/conteudo/nossasLojas/deleteNossasLojas.php?modo=excluir&formulario=endereco&id=<?=$rsEndereco['idEndereco']?>">
+                <a onclick="apagarRegistro('bd/conteudo/nossasLojas/deleteNossasLojas.php?modo=excluir&formulario=endereco&id=<?=$rsEndereco['idEndereco']?>')">
                     <figure class="caixaAcao">
                         <img src="images/delete.png" alt="Botão de ação excluir" title="Excluir">
                     </figure>
@@ -296,8 +296,7 @@
                         <img src="images/editar.png" alt="Botão de ação visualizar" title="Editar">
                     </figure>
                 </a>
-                <a onclick="return confirm('Deseja realmente excluir o registro?')" 
-                href="bd/conteudo/nossasLojas/deleteNossasLojas.php?modo=excluir&formulario=titulo&id=<?=$rsTitulos['idNossasLoja']?>&imagem=<?=$rsTitulos['imagemNossasLoja']?>">
+                <a onclick="apagarRegistro('bd/conteudo/nossasLojas/deleteNossasLojas.php?modo=excluir&formulario=titulo&id=<?=$rsTitulos['idNossasLoja']?>&imagem=<?=$rsTitulos['imagemNossasLoja']?>')">
                     <figure class="caixaAcao">
                         <img src="images/delete.png" alt="Botão de ação excluir" title="Excluir">
                     </figure>

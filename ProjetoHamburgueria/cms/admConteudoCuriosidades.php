@@ -66,6 +66,7 @@
 ?>
 <!-- <script async src="js/mascaras.js"></script> -->
 <script async src="js/verMaisConteudo.js"></script>
+<script src="js/redirecionementoDelete.js"></script>
 <script>
 
     $(document).ready(function () {
@@ -94,8 +95,6 @@
         }); 
         
     });
-
-    <?=ITEM_DELETE_SUCESSO?>
 
     function ativarDesativarCuriosidades(elemento, id, status, tipoFormulario) {
 
@@ -216,8 +215,7 @@
                     </figure>
                 </a>
 
-                <a onclick="return confirm('Deseja realmente excluir o registro?')" 
-                href="bd/conteudo/curiosidades/deleteCuriosidades.php?modo=excluir&formulario=origem&imagem=<?=$rsOrigemHamburguer['imagemOrigemHamburguer']?>&id=<?=$rsOrigemHamburguer['idOrigemHamburguer']?>">
+                <a onclick="apagarRegistro('bd/conteudo/curiosidades/deleteCuriosidades.php?modo=excluir&formulario=origem&imagem=<?=$rsOrigemHamburguer['imagemOrigemHamburguer']?>&id=<?=$rsOrigemHamburguer['idOrigemHamburguer']?>')">
                     <figure class="caixaAcao">
                         <img src="images/delete.png" alt="Botão de ação excluir" title="Excluir">
                     </figure>
@@ -272,12 +270,11 @@
                         <img src="images/editar.png" alt="Botão de ação visualizar" title="Editar">
                     </figure>
                 </a>
-                <a onclick="return apagarItem()" 
-                href="bd/conteudo/curiosidades/deleteCuriosidades.php?modo=excluir&formulario=montagem&imagem=<?=$rsMontagem['imagemMontagem']?>&id=<?=$rsMontagem['idMontagem']?>">
+                <div onclick="apagarRegistro('bd/conteudo/curiosidades/deleteCuriosidades.php?modo=excluir&formulario=montagem&imagem=<?=$rsMontagem['imagemMontagem']?>&id=<?=$rsMontagem['idMontagem']?>')" >
                     <figure class="caixaAcao">
                         <img src="images/delete.png" alt="Botão de ação excluir" title="Excluir">
                     </figure>
-                </a>
+                </div>
             </td>
         </tr>
 

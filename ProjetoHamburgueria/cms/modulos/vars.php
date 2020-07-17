@@ -46,28 +46,6 @@
     </script>
     ";
 
-    const ITEM_DELETE_SUCESSO = "
-
-        function apagarItem() {
-            Swal.fire({
-                title: 'Você deseja apagar esse registo?',
-                text: 'Você não poderá reverter isso',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sim, Delete!'
-            }).then((result) => {
-                if (result.value) {
-                Swal.fire(
-                    'DELETADO com sucesso',
-                    'Todo o registro foi apagado',
-                    'success')
-                    return true;
-                }
-            })
-        }";
-
     const ERRO_LOGIN_SENHA = "
     
         <script>

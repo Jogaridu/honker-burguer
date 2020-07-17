@@ -63,6 +63,7 @@
 ?>
 <!-- <script src="js/mascaras.js"></script> -->
 <script async src="js/verMaisConteudo.js"></script>
+<script src="js/redirecionementoDelete.js"></script>
 <script>
 
     $(document).ready(function () {
@@ -199,8 +200,7 @@
                     </figure>
                 </a>
 
-                <a onclick="return confirm('Deseja realmente excluir o registro?')" 
-                href="bd/conteudo/SobreEmpresa/deleteSobreEmpresa.php?modo=excluir&formulario=origem&id=<?=$rsOrigemEmpresa['idOrigemEmpresa']?>">
+                <a onclick="apagarRegistro('bd/conteudo/SobreEmpresa/deleteSobreEmpresa.php?modo=excluir&formulario=origem&id=<?=$rsOrigemEmpresa['idOrigemEmpresa']?>')">
                     <figure class="caixaAcao">
                         <img src="images/delete.png" alt="Botão de ação excluir" title="Excluir">
                     </figure>
@@ -246,8 +246,7 @@
                         <img src="images/editar.png" alt="Botão de ação visualizar" title="Editar">
                     </figure>
                 </a>
-                <a onclick="return confirm('Deseja realmente excluir o registro?')" 
-                href="bd/conteudo/sobreEmpresa/deletesobreEmpresa.php?modo=excluir&formulario=sobre&id=<?=$rsSobreEmpresa['idSobreEmpresa']?>">
+                <a onclick="apagarRegistro('bd/conteudo/sobreEmpresa/deletesobreEmpresa.php?modo=excluir&formulario=sobre&id=<?=$rsSobreEmpresa['idSobreEmpresa']?>')">
                     <figure class="caixaAcao">
                         <img src="images/delete.png" alt="Botão de ação excluir" title="Excluir">
                     </figure>
