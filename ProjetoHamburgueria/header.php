@@ -1,4 +1,7 @@
-<?='<header>
+<?php 
+
+echo('<header>
+            <div id="erro"></div>
             <div id="caixaCentralizaHeaderFooter">
                 <!-- MENU DESKTOP -->
                 <div id="menu" class="centralizar">
@@ -50,13 +53,13 @@
                     </nav>
 
                     <div id="formLogin">
-                        <form name="loginUsuarioMenu">
+                        <form name="loginUsuarioMenu" id="loginUsuarioMenu" action="login.php" method="POST">
                             <label id="login" class="formatarTexto">
-                                Usuário <input type="text" name="txtLogin" maxlength="20">
+                                Usuário <input type="text" name="txtLogin" maxlength="20" autocomplete="off">
                             </label>
 
                             <label id="senha" class="formatarTexto">
-                                Senha <input type="password" name="txtSenha">
+                                Senha <input type="password" name="txtSenha" autocomplete="off">
                             </label>
 
                             <div id="btnSubmit">
@@ -121,5 +124,12 @@
                     <img src="images/logoEmpresa.png" alt="LOGO DA EMPRESA">
                 </figure>
             </div>
-        </header>';
+        </header>
+        <script>
+            var options = { target: "#erro" }
+            $("#loginUsuarioMenu input[type=submit]").click(function () {
+                $("#loginUsuarioMenu").ajaxForm(options).submit();
+            });
+        </script>
+        ');
 ?>

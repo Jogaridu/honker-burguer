@@ -1,0 +1,150 @@
+@media screen and (min-device-width:1300px) {
+    /* ============= LOJAS ============= */
+    /* LOJAS - Lista de todos os endereços */
+    #caixaEnderecoLojas {
+        min-height: 100px;
+        height: auto;
+        width: inherit;
+
+        background-color: rgb(202, 0, 0);
+        overflow: hidden;
+        padding-left: 40px;
+        box-sizing: border-box;
+    }
+
+    #caixaEnderecoLojas h1 {
+        margin-bottom: 30px;
+    }
+
+    #listaEnderecos {
+        min-height: 80px;
+        height: auto;
+        width: 50%;
+
+        background-color: #e7ae1f;
+        border: 1px solid #000;
+        border-radius: 20px;
+
+        float: left;
+        margin-right: 30px;
+        padding-left: 30px;
+        box-sizing: border-box;
+    }
+
+    .itemListaEnderecos {
+        min-height: 90px;
+        height: auto;
+        width: 520px;
+
+        user-select: none;
+        text-align: center;
+        font-size: 1.4em;
+        line-height: 1.5;
+        background-color: white;
+
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px black;
+        margin-bottom: 35px;
+        margin-top: 25px;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+
+    .formatarTelefone {
+        font-size: 1.0em;
+    }
+
+    /* LOJAS - Mapa */
+    #caixaMapa {
+        height: 500px;
+        width: 45%;
+        
+        float: left;
+        padding-top: 30px;
+        /* padding-left: 25px; */
+        box-sizing: border-box;
+    }
+
+    #mapaFiliais {
+        height: 420px;
+        width: 500px;
+
+        box-shadow: 2px 2px 10px black;
+        background-image: url("../images/lojas/filiais.jpg");
+        background-size: cover;
+    }
+
+}
+
+@media screen and (max-device-width:780px) {
+        /* ============= LOJAS ============= */
+    /* LOJAS - Lista de todos os endereços */
+    #caixaEnderecoLojas {
+        min-height: 100px;
+        height: auto;
+        width: 100%;
+
+        margin: 0px auto;
+        background-color: rgb(202, 0, 0);
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    #caixaEnderecoLojas h1 {
+        margin-bottom: 30px;
+    }
+
+    #listaEnderecos {
+        min-height: 80px;
+        height: auto;
+        width: 90%;
+
+        margin: 0px auto;
+        background-color: #e7ae1f;
+        border: 1px solid #000;
+        border-radius: 20px;
+    }
+
+    .itemListaEnderecos {
+        min-height: 90px;
+        height: auto;
+        width: 90%;
+
+        user-select: none;
+        text-align: center;
+        font-size: 1.4em;
+        line-height: 1.5;
+        background-color: white;
+
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px black;
+        margin: 0px auto;
+        margin-bottom: 35px;
+        margin-top: 25px;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+
+    .formatarTelefone {
+        font-size: 1.0em;
+    }
+
+    /* LOJAS - Mapa */
+    #caixaMapa {
+        height: 500px;
+        width: 90%;
+        
+        margin: 0px auto;
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+
+    #mapaFiliais {
+        height: 420px;
+        width: 100%;
+
+        box-shadow: 2px 2px 10px black;
+        background-image: url("../images/lojas/filiais.jpg");
+        background-size: cover;
+    }
+}

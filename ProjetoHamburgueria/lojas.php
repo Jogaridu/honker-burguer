@@ -1,3 +1,10 @@
+<?php
+    require_once('bd/conexao.php');
+
+    $conexao = conexaoMysql();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,42 +14,60 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/lojas.css">
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/jquery.form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="scripts/mobile.js"></script>
 </head>
 <body>
     <?php include_once("header.php"); ?>
     <div class="caixaCentralizaSite">
 
-        <div id="caixaEnderecoLojas">
-            <h1>ONDE PODE NOS ENCONTRAR?</h1>
-            <ul id="listaEnderecos">
-                <li class="itemListaEnderecos">
-                    <p class="formatarTexto">Av. Luis Carlos Berrini, nº 666</p>
-                    <p class="formatarTexto formatarTelefone">(11)4880-3829</p>
-                </li>
+        <?php 
+            $sql = "SELECT tblNossasLoja.*
+                    FROM tblNossasLoja
+                    WHERE tblNossasLoja.ativado = 1";
 
-                <li class="itemListaEnderecos">
-                    <p class="formatarTexto">Rodovia Raposo Tavares, KM 23,5, Loja 94 - (11)4880-3829</p>
-                </li>
+            $selectTitulo = mysqli_query($conexao, $sql);
 
-                <li class="itemListaEnderecos">
-                    <p class="formatarTexto">Alameda Grajaú, 61 - Alphaville Industrial - (11)4880-3829</p>
-                </li>
+            if($rsTitulo = mysqli_fetch_assoc($selectTitulo)) {
+        ?>
+                <div id="caixaEnderecoLojas">
 
-                <li class="itemListaEnderecos">
-                    <p class="formatarTexto">Av. Dr. Chucri Zaidan, 902, 90 - (11)4880-3829</p>
-                </li>
-            </ul>
+                    <!-- TITULO DA SEÇÃO -->
+                    <h1><?=$rsTitulo['tituloNossasLoja']?></h1>
 
-            <div id="caixaMapa">
-                <figure id="mapaFiliais"></figure>
-            </div>
-        </div>
+                    <!-- LISTA DE ENDEREÇOS -->
+                    <ul id="listaEnderecos">
 
-        
+                    <?php 
+
+                        $sql = "SELECT tblEndereco.*, tblNossasLoja.idNossasLoja as idLojas
+                                FROM tblEndereco, tblNossasLoja
+                                WHERE tblEndereco.ativado = 1 AND tblEndereco.idNossasLoja = tblNossasLoja.idNossasLoja;";
+
+                        $selectEndereco = mysqli_query($conexao, $sql);
+
+                        while($rsEndereco = mysqli_fetch_assoc($selectEndereco)) {
+
+                    ?>
+                            <li class="itemListaEnderecos">
+                                <p class="formatarTexto"><?=$rsEndereco['rua']?>,<?=$rsEndereco['numero']?> - <?=$rsEndereco['bairro']?></p>
+                                <p class="formatarTexto formatarTelefone"><?=$rsEndereco['celular']?></p>
+                            </li>
+
+                        <?php } ?>
+                    </ul>
+
+                    <div id="caixaMapa">
+                        <figure id="mapaFiliais" style="background-image: url('cms/bd/arquivos/<?=$rsTitulo['imagemNossasLoja']?>')"></figure>
+                    </div>
+                </div>
+
+        <?php } ?>
     </div>
     <?php include_once("footer.php"); ?>
     
-    <script src="scripts/jquery-1.11.3.min.js"></script>
-    <script src="scripts/mobile.js"></script>
+    
 </body>
 </html>

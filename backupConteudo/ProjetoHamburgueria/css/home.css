@@ -1,0 +1,384 @@
+@media screen and (min-device-width:1300px) {
+    /* ============= HOME ============= */
+    /* HOME - Carroussel */
+    #caixaCarrousel {
+        height: 300px;
+        width: 1200px;
+    }
+
+    #carroussel{
+        height: 300px;
+        width: 1170px;
+        
+        float: left;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .itensCarroussel {
+        height: 280px;
+        width: 1180px; 
+        background-color: grey;
+        margin: 10px;
+        margin-right: 60px;
+        float: left;
+    }
+
+    .imgCarroussel, .imgCarroussel img {
+        width: inherit;
+        height: inherit;
+    }
+
+    /* Botoes */
+    .nav {
+        height: 50px;
+        width: 50px;
+
+        position: absolute;
+        user-select: none;
+
+        font-size: 2.5em;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+
+        margin-top: 110px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        
+        
+    }
+
+    .nav:hover {
+        transition: 0.2s;
+        cursor: pointer;
+        opacity: 1;
+        background-color: rgb(202, 0, 0);
+    }
+
+    .next {
+        margin-left: 1150px;
+    }
+
+    /* HOME - ListaProdutos */
+    #produtosConteudo {
+        width: 1200px;
+        min-height: 500px;
+        height: auto;
+
+        background-image: url("../images/fundo-amarelo-1.jpg");
+        background-size: cover;
+        overflow: hidden;
+        user-select: none;
+
+        border: 1px solid #000;
+        box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.39);
+    }
+
+    #btnMostraLista {
+        display: none;
+    }
+
+    #listaSelecaoItens {
+        min-height: 500px;
+        height: auto;
+        width: 220px;
+
+        float: left;
+        z-index: 999;
+
+        background-color: rgb(202, 0, 0);
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.76);
+    }
+
+    #listaSelecaoItens li {
+        height: 50px;
+        width: inherit;
+        background-color: rgb(255, 252, 94);
+
+        display: grid;
+        align-items: center;
+        border-bottom: 1px solid #000;
+    }
+
+    #listaSelecaoItens li:hover {
+        border-left: 3px solid #000;
+    }
+
+    /* HOME - Produtos PRECO NOME DESCRICAO */
+    #caixaProdutos {
+        min-height: 500px;
+        height: auto;
+        width: 975px;
+        
+        float: left;
+        padding-top: 100px;
+        margin-left: 5px;
+    }
+
+    .produtos {
+        height: 390px;
+        width: 280px;
+        background-color: rgb(202, 0, 0);
+        
+        border-radius: 10px;
+        border: 1px solid rgb(0, 0, 0);
+        box-shadow: 1px 1px 10px rgb(0, 0, 0);
+        line-height: 1.5;
+
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        padding: 8px;
+        padding-top: 15px;
+    }
+
+    .caixaImgProduto, .caixaImgProduto img {
+        height: 130px;
+        width: 200px;
+        
+        margin-bottom: 20px;
+        border-radius: 10px;
+        
+        box-shadow: 2px 2px 2px black;
+    }
+
+    .caixaSobreProduto {
+        height: 160px;
+        width: inherit;
+        
+        text-align: left;
+
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .caixaSobreProduto p {
+        height: 60px;
+        width: inherit;
+        border-bottom: 3px solid #000;
+        border-radius: 10px;
+
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        
+        box-sizing: border-box;
+
+        user-select: none;
+        background-color: rgb(251, 154, 43);
+    }
+
+    .btnDetalhes {
+        height: 30px;
+        width: 85px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        border-radius: 10px;
+        border-bottom: 1px solid #000;
+
+        position: relative;
+        left: 195px;
+        top: 30px;
+        padding-top: 2px;
+        box-sizing: border-box;
+
+        cursor: pointer;
+    }
+
+    .btnDetalhes:hover {
+        font-weight: bold;
+        background-color: rgb(255, 238, 64);
+        border-radius: 10px;
+    }
+
+    /* HOME - Rede Sociais */
+    #caixaRedeSocial {
+        height: 210px;
+        width: 70px;
+        
+        position: fixed;
+        margin-left: 1200px;
+        z-index: 999;
+    }
+
+    #caixaRedeSocial img {
+        height: 60px;
+        width: 70px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-device-width: 780px) {
+    /* ============= HOME ============= */
+    /* HOME - Carroussel - DESABILITANDO*/
+    #caixaCarrousel {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .imgCarroussel {
+        display: none;
+    }
+
+    /* HOME - Imagem normal */
+    #imgCabecalhoMobile{
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/home/slider02.png");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    /* LISTA DESKTOP DESATIVANDO */
+    #listaSelecaoItens {
+        display: none;
+    }
+
+    /* HOME - ListaProdutos */
+    #produtosConteudo {
+        width: 90%;
+        min-height: 500px;
+        height: auto; 
+
+        background-image: url("../images/fundo-amarelo-1.jpg");
+        background-size: cover;
+        overflow: hidden;
+        user-select: none;
+
+        border: 1px solid #000;
+        box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.39);
+    }
+    
+    #btnMostraLista {
+        height: 50px;
+        width: 50px;
+        /* position: fixed; */
+        left: 45%;
+        right: 45%;
+        background-image: url("../images/home/iconeTresBotoes.png");
+        background-size: cover;
+    }
+
+    #listaSelecaoItensMobile {
+        min-height: 50px;
+        height: auto;
+        width: 220px;
+
+        z-index: 0;
+
+        margin-left: -85px;
+        margin-top: 50px;
+        background-color: rgb(202, 0, 0);
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.76);
+        display: none;
+    }
+
+    #listaSelecaoItensMobile li {
+        height: 50px;
+        width: inherit;
+        background-color: rgb(255, 252, 94);
+
+        display: grid;
+        align-items: center;
+        border-bottom: 1px solid #000;
+    }
+
+    #listaSelecaoItensMobile li:hover {
+        border-left: 3px solid #000;
+    }
+
+    /* HOME - Produtos PRECO NOME DESCRICAO */
+    #caixaProdutos {
+        min-height: 500px;
+        height: auto;
+        width: 100%;
+        
+        float: left;
+        padding-top: 100px;
+    }
+
+    .produtos {
+        height: 390px;
+        width: 90%;
+        background-color: rgb(202, 0, 0);
+        
+        border-radius: 10px;
+        border: 1px solid rgb(0, 0, 0);
+        box-shadow: 1px 1px 10px rgb(0, 0, 0);
+        line-height: 1.5;
+
+        margin: 0px auto;
+        margin-bottom: 20px;
+        padding: 8px;
+        padding-top: 15px;
+    }
+
+    .caixaImgProduto, .caixaImgProduto img {
+        height: 130px;
+        width: 200px;
+        
+        margin-bottom: 20px;
+        border-radius: 10px;
+        
+        box-shadow: 2px 2px 2px black;
+    }
+
+    .caixaSobreProduto {
+        height: 160px;
+        width: 100%;
+        
+        text-align: left;
+        margin-bottom: 45px;
+        box-sizing: border-box;
+    }
+
+    .caixaSobreProduto p {
+        height: 60px;
+        width: inherit;
+        border-bottom: 3px solid #000;
+        border-radius: 10px;
+
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        
+        box-sizing: border-box;
+
+        user-select: none;
+        background-color: rgb(251, 154, 43);
+    }
+
+    .btnDetalhes {
+        height: 30px;
+        width: 85px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        border-radius: 10px;
+        border-bottom: 1px solid #000;
+
+        float: right;
+        padding-top: 2px;
+        box-sizing: border-box;
+        z-index: 998;
+
+        cursor: pointer;
+    }
+
+    .btnDetalhes:hover {
+        font-weight: bold;
+        background-color: rgb(255, 238, 64);
+        border-radius: 10px;
+    }
+
+    /* HOME - Rede Sociais Desktop DESABILITANDO*/
+    #caixaRedeSocial {
+        display: none;
+    }
+}

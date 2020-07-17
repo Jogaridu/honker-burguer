@@ -114,7 +114,7 @@
 
     /* PROMO - Caixa de promoções 
     que segura um tipo específico de produto */
-    #promocao {
+    .promocao {
         min-height: 400px;
         height: auto;
         width: 95%;
@@ -129,7 +129,7 @@
         background-color: rgb(202, 0, 0);
     }
 
-    #promocao h1 {
+    .promocao h1 {
         color: white;
     }
 
@@ -245,7 +245,7 @@
 
     /* PROMO - Caixa de promoções 
     que segura um tipo específico de produto */
-    #promocao {
+    .promocao {
         min-height: 400px;
         height: auto;
         width: 90%;
@@ -261,7 +261,7 @@
         background-color: rgb(202, 0, 0);
     }
 
-    #promocao h1 {
+    .promocao h1 {
         color: white;
     }
 }

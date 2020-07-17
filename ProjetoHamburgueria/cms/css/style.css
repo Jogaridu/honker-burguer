@@ -1,0 +1,948 @@
+header {
+    height: 170px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 2px solid #000;
+    background-color: white;
+    box-shadow: inset 1px 1px 5px black;
+}
+
+main {
+    min-height: 500px;
+    height: auto;
+    width: 100%;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+footer {
+    height: 7vh;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+    border: 3px solid #000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+figcaption {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h2 {
+    min-height: 50px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*  -------------------------- CLASSES GLOBAIS -------------------------- */
+#caixaCentralizaSite {
+    min-height: 100px;
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.formatarTexto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+
+.destaque {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* =-=-HEADER DA PÁGINA-=-= */
+#tituloCMS {
+    height: inherit;
+    width: 70%;
+    line-height: 160px;
+    float: left;
+    padding-left: 50px;
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+
+#logoCMS {
+    height: inherit;
+    width: 30%;
+    float: left;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+#logoCMS img {
+    height: 130px;
+    width: 290px;
+}
+
+/* -------------------------- MENU LISTA -------------------------- */
+
+nav {
+    height: 160px;
+    width: 100%;
+}
+
+#menuLista {
+    height: inherit;
+    width: 840px;
+    background-color: white;
+    float: left;
+    padding-top: 15px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000;
+    box-shadow: inset 1px 1px 5px black;
+}
+
+.itemMenuLista {
+    height: 140px;
+    width: 140px;
+    float: left;
+    margin: 0px 70px;
+    border-radius: 10px;
+    transition: 350ms;
+    z-index: 999;
+    background-color: #1F95B1;   
+    position: relative;
+}
+
+
+.itemMenuLista:hover,
+#logout:hover,
+.btnSelecaoNivelUsuario:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px black;
+}
+
+.itemMenuLista.itemBloqueado {
+    filter: grayscale(40%);
+    background-image: url("../images/bloquado.png");
+    background-size: cover;
+}
+
+.itemMenuLista.itemBloqueado:hover {
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+
+figcaption{
+    color: white;
+    font-size: 1em;
+}
+
+#caixaUsuarioLogout {
+    height: inherit;
+    width: 360px;
+    background-color: white;
+    float: left;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 10px;
+    border-bottom: 2px solid #000;
+    box-shadow: inset 1px 1px 5px black;
+}
+
+#logout {
+    height: 35px;
+    width: 130px;
+    background-color: red;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 350ms;
+}
+
+.imgIconeMenu, 
+.imgIconeMenu  img{
+    height: 80px;
+    width: 80px;
+}
+
+.menu {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+/* -------------------------- ANIMACAO DE ENTRADA -------------------------- */
+#caixaAnimcaoEntrada {
+    height: 150px;
+    width: 350px;
+    border-radius: 10px;
+    margin: 80px auto;
+    text-transform: uppercase;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    box-shadow: 1px 1px 20px black;
+    background: rgb(147,147,147);
+    background: linear-gradient(162deg, rgba(147,147,147,1) 5%, rgba(209,209,209,1) 40%, rgba(255,255,255,1) 100%);
+}
+
+#caixaAnimcaoEntrada::after {
+    content: "";
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    margin: 5px;
+    bottom: 0;
+    right: 0;
+    background-image: url("../images/engrenagem.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: circular 2.0s linear infinite;
+    z-index: 999;
+}
+
+#caixaAnimcaoEntrada::before {
+    content: "";
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    margin: 5px;
+    bottom: 0;
+    right: 40px;
+    background-image: url("../images/engrenagem.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 999;
+    animation: circular 2s linear infinite reverse;
+}
+
+@keyframes circular {
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+/* -------------------------- FALE CONOSCO -------------------------- */
+
+/* =-=-TABELA DE COMENTARIOS-=-= */
+#tabelaDadosUsuarios {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(31,149,177);
+    background: linear-gradient(180deg, rgba(31,149,177,1) 5%, rgba(121,219,233,1) 40%, rgba(255,255,255,1) 100%);
+}
+
+.colunaDadoUsuario,
+.colunaAcao {
+    height: 80px;
+    width: 225px;
+    display: block;
+    float: left;
+    text-align: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+    font-size: 1.0em;
+    user-select: none;
+    border-radius: 10px;
+}
+
+.colunaAcao {
+    width: 300px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* =-=- CAIXA DE FILTRO-=-= */
+#caixaFiltro, #listaFiltro {
+    height: 50px;
+    width: 100%;
+}
+
+#listaFiltro li {
+    height: 40px;
+    width: 120px;
+    float: right;
+    text-align: center;
+    font-size: 1.0em;
+    margin-right: 20px;
+    
+}
+
+.caixaFiltro {
+    height: 40px;
+    width: 120px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #000;
+    display: block;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.caixaFiltro:hover {
+    background-color: red;
+}
+
+input[type=radio] {
+    cursor: pointer;
+}
+
+input[type=submit] {
+    float: right;
+    margin-top: 10px;
+}
+
+/* =-=-CAIXA DE AÇÕES-=-= */
+.caixaVizualizar,
+.caixaDeletar {
+    height: 45%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.caixaVizualizar h3,
+.caixaDeletar h3 {
+    height: 35px;
+    width: 50%;
+    padding-top: 5px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.caixaVizualizar img,
+.caixaDeletar img {
+    height: 30px;
+    width: 30px;
+}
+
+.caixaDeletar {
+    top: 40px;
+}
+
+.caixaVizualizar:hover,
+.caixaDeletar:hover {
+    background-color: gray;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+    transition: 350ms;
+}
+
+/* =-=-CAIXA DE VISUALIZAR-=-= */
+.linhaConteudoContato {
+    min-height: 50px;
+    height: auto;
+    width: 800px;
+    margin: 15px auto;
+    box-shadow: 1px 1px 10px black;
+    background-color: #979797;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.colunaTitulo,
+.colunaConteudo {
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    border-radius: 10px;
+}
+
+.colunaConteudo {
+    min-height: 50px;
+    height: auto;
+    width: 540px;
+    background-color: #fff;
+    margin-left: 10px;
+}
+
+/* -------------------------- ADMINISTRAÇÃO DE USUÁRIOS -------------------------- */
+
+/* =-=-INDEX DOS BOTÕES-=-= */
+.btnSelecaoNivelUsuario {
+    height: 250px;
+    width: 270px;
+    background-color: rgb(221, 221, 221);
+    margin: 0 auto;
+    float: left;
+    margin: 20px 160px ;
+    box-shadow: inset 1px 1px 10px rgb(0, 0, 0);
+    border-radius: 20px;
+    transition: 350ms;
+}
+
+.btnSelecaoNivelUsuario:hover {
+    background-color: #fff;
+}
+
+#caixaNivel, 
+#caixaUsuario,
+.caixaConteudo{
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.imagemMenu, .imagemMenu img{
+    height: 130px;
+    width: 130px;
+    margin: 0 auto;
+    padding-top: 20px;
+    transition: 350ms;
+}
+
+.nomeMenu{
+    height: 50px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    color: #046d88;
+    transition: 350ms;
+}
+
+.btnSelecaoNivelUsuario:hover {
+    cursor: pointer;
+}
+
+/* =-=-TELA DE VISUALIZAÇÃO GERAL-=-= */
+
+#btnCriarNovoCampo,
+.btnVisualizarNivelUsuario {
+    height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #000;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px #000;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    user-select: none;
+}
+
+#btnCriarNovoCampo:hover {
+    cursor: pointer;
+    background-color: #979797;
+}
+
+.caixaNivelUsuario,
+.caixaCriarNovoCampo {
+    min-height: 280px;
+    height: auto;
+    width: 260px;
+    margin: 40px;
+    margin-left: 80px;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.caixaCriarNovoCampo {
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+.btnVisualizarNivelUsuario {
+    height: 35px;
+    width: 120px;
+    background-color: #fff;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+    user-select: none;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.btnVisualizarNivelUsuario:hover {
+    background-color: #979797;
+    cursor: pointer;
+}
+
+.btnAtivarDesativar {
+    height: 30px;
+    width: 80px;
+    float: right;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.btnAtivarDesativar input[type=checkbox] {
+    height: inherit;
+    width: inherit;
+    -webkit-appearance: none;
+    background-color: red;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+}
+
+.btnAtivarDesativar input[type=checkbox]:checked {
+    background-color: green;
+}
+
+.btnAtivarDesativar input[type=checkbox]::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 50px;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    border-radius: 20px;
+    transition: .5s;
+    box-shadow: 0 0 5px black;
+}
+
+.btnAtivarDesativar input:checked[type=checkbox]::before {
+    left: 30px;
+}
+
+.conteudoUsuario {
+    min-height: 85px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+}
+
+.conteudoNivel {
+    height: 210px;
+    width: 100%;
+    float: left;
+}
+
+.caixaPermissoesNiveis {
+    height: 110px;
+    width: 100%;
+    float: left;
+    padding-left: 10px;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+.caixaPermissoesNiveis div{
+    height: 20px;
+    width: 100%;
+    user-select: none;
+    font-size: 1.0em;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-top: 2px;
+    margin-bottom: 15px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: red;
+    box-shadow: 0 0 10px black;
+}
+
+.caixaPermissoesNiveis div:hover {
+    cursor: pointer;
+}
+
+.conteudo {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    user-select: none;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.titulo {
+    height: 20px;
+    width: 100%;
+    float: left;
+    font-size: 1.1em;
+    border-bottom: 1px double #000;
+}
+
+/* =-=-TELA DE VISUALIZAÇÃO ESPECÍFICO e CRIAÇÃO DE NOVOS CAMPOS-=-= */
+#tblFormularioVisualizar {
+    min-height: 100px;
+    height: auto;
+    width: 800px;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#tblFormularioVisualizar .editarCheckBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tblFormularioVisualizar label {
+    height: 60px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    float: left;
+    user-select: none;
+    cursor: pointer;
+}
+
+#tblFormularioVisualizar label:hover {
+    color: red;
+}
+
+#tblFormularioVisualizar label input[type=checkbox] {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+
+#tblFormularioVisualizar label input[type=text],
+#tblFormularioVisualizar label input[type=url],
+#tblFormularioVisualizar label input[type=email],
+#tblFormularioVisualizar label input[type=password] {
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+#tblFormularioVisualizar input[type=submit],
+#tblFormularioVisualizar input[type=button] {
+    height: 45px;
+    width: 90px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: none;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+}
+
+#tblFormularioVisualizar input[type=submit]:hover,
+#tblFormularioVisualizar input[type=button]:hover {
+    cursor: pointer;
+    background-color: #979797;
+}
+
+#tblFormularioVisualizar select {
+    height: 45px;
+    width: 250px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#caixaBotoesFormulario {
+    height: 100px;
+    width: 90px;
+    float: right;
+    margin-top: -20px;
+}
+
+#btnVoltar {
+    height: 40px;
+    width: 150px;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 8px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    user-select: none;
+}
+
+#btnVoltar:hover {
+    cursor: pointer;
+    background-color: #979797;
+}
+
+/* =-=-MODAL CONFIG-=-= */
+#modal {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    position: fixed;
+    padding-top: 30px;
+    box-sizing: border-box;
+    display: none;
+}
+
+#modalConteudo {
+    height: 600px;
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* -------------------------- ADMINISTRAÇÃO DE CONTEÚDOS -------------------------- */
+
+/* =-=-FORMULARIO DE CONTEUDOS-=-= */
+.formularioConteudos {
+    min-height: 100px;
+    height: auto;
+    width: 498px;
+    float: left;
+    background-color: white;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 20px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 40px 35px;
+}
+
+.formularioConteudos label {
+    min-height: 50px;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #000;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formularioConteudos label:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.formularioConteudos label input[type=text],
+.formularioConteudos label input[type=file] {
+    height: 27px;
+    margin-left: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.formularioConteudos label select {
+    height: 27px;
+    width: 220px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.formularioConteudos label textarea {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    float: left;
+}
+
+#imgEscolhidaUsuario,
+.imgEscolhidaUsuario,
+#imgEscolhidaUsuario img,
+.imgEscolhidaUsuario img{
+    height: 260px;
+    width: 260px;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 15px;
+}
+
+/* =-=-VISUALIZAÇÃO DE CONTEUDOS-=-= */
+
+#caixaMostrandoSecao {
+    min-height: 250px;
+    height: auto;
+    width: inherit;
+    margin-top: 50px;
+    /* background-color: yellow; */
+    overflow: hidden;
+    float: left;
+}
+
+.tituloSecao {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+}
+
+.conteudoSecao {
+    min-height: 70px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.tabelaSecao {
+    min-height: 100px;
+    height: auto;
+    width: 1100px;
+    margin: 10px auto;
+    background: rgb(31,149,177);
+    background: linear-gradient(180deg, rgba(31,149,177,1) 5%, rgba(121,219,233,1) 40%, rgba(255,255,255,1) 100%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.tabelaSecao tr {
+    min-height: 80px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+}
+
+.tabelaSecao tr td {
+    min-height: 80px;
+    height: auto;
+    max-height: 150px;
+    width: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7em;
+    user-select: none;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.tabelaSecao tr td .btnAtivarDesativar {
+    margin-left: 10px;
+}
+
+.conteudoImagem,
+.conteudoImagem img {
+    height: 80px;
+    width: 100px;
+}
+
+.caixaAcao,
+.caixaAcao img {
+    height: 30px;
+    width: 30px;
+    float: left;
+    filter: contrast(50%);
+}
+
+.caixaAcao { margin: 0 15px; }
+
+.caixaAcao:hover,
+.caixaAcao img:hover {
+    cursor: pointer;
+    transition: 500ms;
+    filter: contrast(100%);
+}
+
+.verMaisConteudo {
+    position: relative;
+    cursor: pointer;
+    transition-delay: 0.8s;
+    transition: 0.9s;
+}
+
+.verMaisConteudo::before {
+    content: "Ver mais";
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 6px;
+    border-radius: 4px;
+    z-index: 101;
+}
+
+.verMaisConteudo::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    /* background-color: rgba(255, 255, 255, 0.507); */
+}
+
+.animacaoCrescendo {
+    animation: animacaoCrecendo 100ms;
+}
+
+@keyframes animacaoCrescendo {
+    from {
+        background-color: transparent;
+        box-shadow: 0 0 0 black;
+    } to {
+        background-color: white;
+        box-shadow: 1px 1px 10px black;
+    }
+}

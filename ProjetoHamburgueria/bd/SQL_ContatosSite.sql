@@ -2,27 +2,139 @@ create database dbContatos;
 
 use dbContatos;
 
+# ----------------- FALE CONOSCO -----------------
+create table tblClassificacao(
+	idClassificacao int auto_increment not null primary key,
+    nomeClassificacao varchar(20) not null
+);
+
 create table tblContatosSite(
-	idContatoSite int auto_increment not null,
+	idContatoSite int auto_increment not null  primary key,
     nome varchar(100) not null,
-    telefone varchar(13) not null,
-    celular varchar(13) not null,
+    telefone varchar(18) not null,
+    celular varchar(18) not null,
     email varchar(100) not null,
 	profissao varchar(100) not null,
     sexo varchar(1) not null,
     homepage varchar(150),
     link varchar(150),
-    classificacao varchar(8),
     mensagem text,
-
-    primary key (idContatoSite)
+	idClassificacao int not null,
+    
+    constraint FK_classificacao_contatosSite foreign key (idClassificacao) 
+    references tblClassificacao (idClassificacao)
 );
 
-show tables;
+SELECT tblContatosSite.*, tblClassificacao.nomeClassificacao FROM tblContatosSite, tblClassificacao WHERE tblContatosSite.idClassificacao = tblClassificacao.idClassificacao AND tblContatosSite.idContatoSite = 5;
+SELECT tblContatosSite.* from tblContatosSite;
+
+# ----------------- ADMINISTRAÇÃO DE USUÁRIOS -----------------
+create table tblPermissao (
+	idPermissao int auto_increment not null  primary key,
+    nomePermissao varchar(50) not null,
+    faleConosco boolean not null,
+    admUsuario  boolean not null,
+    admConteudo boolean not null,
+    admProduto boolean not null
+);
+            
+select * from tblPermissao;
+
+create table tblUsuario (
+	idUsuario int auto_increment not null  primary key,
+    nomeUsuario varchar(50) not null,
+    usuario varchar(50) not null,
+    senha varchar(50) not null,
+    email varchar(100) not null,
+    celular varchar(15) not null,
+    idPermissao int not null,
+    constraint FK_permissao_usuario foreign key (idPermissao)
+    references tblPermissao (idPermissao)
+);
+            
+select * from tblUsuario;
+
+# ----------------- ADMINISTRAÇÃO DE CONTEÚDO -----------------
+
+# -=-=-=-= Nossas Lojas =-=-=-=-
+create table tblNossasLoja (
+	idNossasLoja int auto_increment not null  primary key,
+    tituloNossasLoja varchar(50),
+    imagemNossasLoja varchar(200)
+);
+
+create table tblEndereco (
+	idEndereco int auto_increment not null  primary key,
+    rua varchar(100),
+    numero varchar(10),
+    bairro varchar(100),
+    celular varchar(15),
+    idNossasLoja int not null,
+    constraint FK_nossasLoja_endereco foreign key (idNossasLoja)
+    references tblNossasLoja (idNossasLoja)
+);
+
+select * from tblEndereco;
+select * from tblNossasLoja;
+
+alter table tblEndereco add cep varchar(9);
+alter table tblEndereco add ativado boolean;
+alter table tblNossasLoja add ativado boolean;
+
+# -=-=-=-= Sobre a empresa =-=-=-=-
+create table tblOrigemEmpresa (
+	idOrigemEmpresa int auto_increment not null  primary key,
+    tituloOrigemEmpresa varchar(50),
+    conteudoOrigemEmpresa text,
+    imagemOrigemEmpresa varchar(200),
+    ativado boolean
+);
+
+create table tblSobreEmpresa (
+	idSobreEmpresa int auto_increment not null  primary key,
+    tituloSobreEmpresa varchar(50),
+    conteudoSobreEmpresa text,
+    ativado boolean
+);
+
+# -=-=-=-= Curiosidades =-=-=-=-
+create table tblOrigemHamburguer (
+	idOrigemHamburguer int auto_increment not null  primary key,
+    tituloOrigemHamburguer varchar(50),
+    conteudoOrigemHamburguer text,
+    imagemOrigemHamburguer varchar(200),
+    ativado boolean
+);
+
+SELECT * FROM tblMontagem;
+
+create table tblMontagem (
+	idMontagem int auto_increment not null  primary key,
+    tituloMontagem varchar(50),
+    conteudoMontagem text,
+    imagemMontagem varchar(200),
+    ativado boolean
+);
+SELECT * FROM tblMontagem;
+
+# ----------------- TESTES DE CÓDIGOS -----------------
+insert into tblContatosSite
+            (nome, telefone, celular, email, profissao, sexo, homepage, link, mensagem, idClassificacao)
+            values 
+            ('Jorge', '1234-1234', '1234-4321', 'e-jorge2010@hotmail.com', 'programador', 'm', '', '', 'ERROOOO', 1);
+
+select * from tblClassificacao;
+
+insert into tblClassificacao (nomeClassificacao) values ('Critica');
+insert into tblClassificacao (nomeClassificacao) values ('Sugestao');
+
+drop table tblContatosSite;
 
 desc tblContatosSite;
 
-select * from tblContatosSite;
+select tblContatosSite.idContatoSite, tblContatosSite.nome, tblContatosSite.profissao, tblContatosSite.classificacao, tblContatosSite.celular  from tblContatosSite;
 
-#ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'bcd127';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY "";
+
+SELECT tblContatosSite.nome, tblContatosSite.profissao, tblContatosSite.celular, tblContatosSite.idClassificacao, tblContatosSite.idContatoSite, tblClassificacao.nomeClassificacao FROM tblContatosSite, tblClassificacao WHERE tblContatosSite.idClassificacao = tblClassificacao.idClassificacao AND tblContatosSite.idClassificacao = 1;
 

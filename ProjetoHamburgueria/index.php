@@ -12,11 +12,15 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/jquery.form.js"></script>
+    <script src="scripts/carroussel.js"></script>
+    <script src="scripts/mobile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 <body>
     <!-- Import header -->
     <?php include_once("header.php") ?>
-    
     <main>
         <!-- Carrousel -->
         
@@ -193,9 +197,5 @@
     </main>
     
     <?php include_once("footer.php"); ?>
-    
-    <script src="scripts/jquery-1.11.3.min.js"></script>
-    <script src="scripts/carroussel.js"></script>
-    <script src="scripts/mobile.js"></script>
 </body>
 </html>

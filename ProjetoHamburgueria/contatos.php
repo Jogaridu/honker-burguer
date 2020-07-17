@@ -2,7 +2,7 @@
 require_once('bd/conexao.php');
 
 //Abre a conexão com o BD
-$conex = conexaoMysql();
+$conexao = conexaoMysql();
 
 //Valida se o formulário foi submetido pelo usuário
 if(isset($_POST['btnEnviar']))
@@ -14,7 +14,7 @@ if(isset($_POST['btnEnviar']))
     $email = $_POST['txtEmail'];
     $profissao = $_POST['txtProfissao'];
     $sexo = $_POST['rdoSexo'];
-    $homePage = $_POST['txtHomePage'];
+    $homePage = $_POST['txtPage'];
     $link = $_POST['txtLink'];
     $classificacao = $_POST['sltClassificacao'];
     $mensagem = $_POST['txtMensagem'];
@@ -23,16 +23,16 @@ if(isset($_POST['btnEnviar']))
     
             (
                    nome, telefone, celular, email, profissao, sexo, homepage, link,
-                   classificacao, mensagem
+                   mensagem, idClassificacao
             )
             values 
             (      
-                '".$nome."', '".$telefone."', '".$celular."', '".$email."', '".$profissao."', '".$sexo."', '".$homePage."', '".$link."', '".$classificacao."', '".$mensagem."'
+                '".$nome."', '".$telefone."', '".$celular."', '".$email."', '".$profissao."', '".$sexo."', '".$homePage."', '".$link."', '".$mensagem."', '".$classificacao."'
             )";
 
     
  
-    if(mysqli_query($conex, $sql))
+    if(mysqli_query($conexao, $sql))
         echo("<script>alert('Registro inserido com sucesso!')</script>");
     else
         echo("<script>alert('Erro ao escutar o script!')</script>");
@@ -49,6 +49,11 @@ if(isset($_POST['btnEnviar']))
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/contatos.css">
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/jquery.form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="scripts/contatos.js"></script>
+    <script src="scripts/mobile.js"></script>
 </head>
 <body>
     <?php include_once("header.php"); ?>
@@ -66,17 +71,17 @@ if(isset($_POST['btnEnviar']))
                 <h3>Informações do Usuário</h3>
                 <div class="caixaEntradaDados">
                     Nome
-                    <input name="txtNome" id="nome" type="text" name="txtNome" maxlength="25" placeholder="Insira seu nome aqui" required>
+                    <input name="txtNome" id="nome" type="text" maxlength="25" placeholder="Insira seu nome aqui" required>
                 </div>
 
                 <div class="caixaEntradaDados">
                     Telefone
-                    <input name="txtTelefone" id="telefone" type="tel" maxlength="15" placeholder="Insira seu telefone aqui">
+                    <input name="txtTelefone" id="telefone" type="tel" maxlength="9" placeholder="Insira seu telefone aqui">
                 </div>
 
                 <div class="caixaEntradaDados">
                     Celular
-                    <input name="txtCelular" id="celular" type="tel" maxlength="14" placeholder="Insira seu número aqui" required>
+                    <input name="txtCelular" id="celular" type="tel" maxlength="15" placeholder="Insira seu número aqui" required>
                 </div>
 
                 <div class="caixaEntradaDados">
@@ -102,19 +107,31 @@ if(isset($_POST['btnEnviar']))
                 <h3>Sugestões ou Contatos</h3>
                 <div class="caixaEntradaDados">
                     Home Page
-                    <input name="txtPage" type="url" name="txtNome" maxlength="100" placeholder="Insira sua Home Page aqui">
+                    <input name="txtPage" type="url" maxlength="100" placeholder="Insira sua Home Page aqui">
                 </div>
 
                 <div class="caixaEntradaDados">
                     Link Facebook
-                    <input name="txtLink" type="url" name="txtNome" maxlength="50" placeholder="Insira seu link do Facebook aqui">
+                    <input name="txtLink" type="url" maxlength="50" placeholder="Insira seu link do Facebook aqui">
                 </div>
 
                 <div class="caixaEntradaDados">
                     Tipo de mensagem
                     <select name="sltClassificacao">
-                        <option value="sugestao">Sugestão</option>
-                        <option value="critica">Crítica</option>
+                        <!-- PEGANDO OPÇÕES DO BANCO(CRITICA/SUGESTAO) -->
+                        <?php
+                            $sql = "SELECT * from tblClassificacao";
+                            
+                            $selectClassificacao = mysqli_query($conexao, $sql);
+
+                            while ($rsClassificacao = mysqli_fetch_assoc($selectClassificacao)) {
+
+                        ?>
+                        
+                            <option value="<?=$rsClassificacao['idClassificacao']?>"><?=$rsClassificacao['nomeClassificacao']?></option>
+
+                        <?php } ?>
+
                     </select>
                     
                 </div>
@@ -134,7 +151,5 @@ if(isset($_POST['btnEnviar']))
 
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="scripts/contatos.js"></script>
-    <script src="scripts/mobile.js"></script>
 </body>
 </html>

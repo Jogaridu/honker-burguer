@@ -15,7 +15,7 @@
         <h1>PROMOÇÕES</h1>
         <div id="caixaProdutos" class="centralizar">
 
-            <div id="promocao">
+            <div class="promocao">
                 <h1>Hamburgueres</h1>
                 <div class="produtos">
                     <figure class="imagemProduto">
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <div id="promocao">
+            <div class="promocao">
                 <h1>Batata Frita</h1>
                 <div class="produtos">
                     <figure class="imagemProduto">

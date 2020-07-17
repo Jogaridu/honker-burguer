@@ -1,3 +1,10 @@
+<?php
+    require_once('bd/conexao.php');
+
+    $conexao = conexaoMysql();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,18 +14,34 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sobreEmpresa.css">
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/sobreEmpresa.js"></script>
+    <script src="scripts/mobile.js"></script>
+    <script src="scripts/jquery.form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 <body>
     <?php include_once("header.php"); ?>
     
     
     <div class="caixaCentralizaSite">
-        <section id="caixaSobreEmpresa" class="centralizar">
-            <h2>Sobre a Empresa</h2>
-            <p class="formatarTexto">
-            Somos uma empresa orgulhosamente mineira de produtos alimentícios que atende às diferentes necessidades de cada região do Brasil. A Alimenta conquistou sua reputação por entregar produtos de qualidade, trabalhar com integridade e respeitar seus colaboradores e parceiros de negócio.
-            </p>
-        </section>
+
+        <?php 
+            $sql = "SELECT * FROM tblSobreEmpresa WHERE tblSobreEmpresa.ativado = 1";
+
+            $selectSobreEmpresa = mysqli_query($conexao, $sql);
+
+            if($rsSobreEmpresa = mysqli_fetch_assoc($selectSobreEmpresa)) {
+
+        ?>
+            <section id="caixaSobreEmpresa" class="centralizar">
+                <h2><?=$rsSobreEmpresa['tituloSobreEmpresa']?></h2>
+                <p class="formatarTexto">
+                    <?=$rsSobreEmpresa['conteudoSobreEmpresa']?>
+                </p>
+            </section>
+
+            <?php } ?>
 
         <div id="caixaLinhaDoTempo" class="centralizar">
             <div id="btnLinhaDoTempo" class="formatarTexto centralizar">
@@ -26,20 +49,29 @@
             </div>
 
             <div id="caixaConteudoLinhaDoTempo" class="centralizar">
-                <section class="conteudoHistoria">
-                    <h3>Criador</h3>
-                    <figure class="imagemHistoria">
-                        <img src="images/sobreEmpresa/imgCriador.jpg" alt="IMAGEM DO CRIADOR">
-                    </figure>
-                    <p class="formatarTexto">
-                    O Sr. Douglas Funny, uma barraca de fast food e um sonho. Douglas Funny revolucionaram a pequena cidade de Arcadia (Califórnia) quando abriram uma lanchonete que vendia hambúrgueres por 10 centavos cada, servidos de minuto a minuto, embrulhados em papel e sem necessidade de garçons: o cliente fazia o pedido diretamente ao cozinheiro. Três anos depois, em 1940, Douglas transformou a barraca de comida rápida em um restaurante com cimento, ladeado com o nome HONKER em amarelo de 7,5 metros de altura que não podia ser visto do espaço, mas com certeza a partir de qualquer ponto da cidade.
-                    </p>
-                </section>
 
-                <section class="conteudoHistoria">
+                <?php
+                    $sql = "SELECT * FROM tblOrigemEmpresa WHERE tblOrigemEmpresa.ativado = 1";
+
+                    $selectOrigemEmpresa = mysqli_query($conexao, $sql);
+
+                    while ($rsOrigemEmpresa = mysqli_fetch_assoc($selectOrigemEmpresa)) {
+                ?>
+                    <section class="conteudoHistoria">
+                        <h3><?=$rsOrigemEmpresa['tituloOrigemEmpresa']?></h3>
+                        <figure class="imagemHistoria">
+                            <img src="cms/bd/arquivos/<?=$rsOrigemEmpresa['imagemOrigemEmpresa']?>" alt="Imagem origem da empresa">
+                        </figure>
+                        <p class="formatarTexto">
+                            <?=$rsOrigemEmpresa['conteudoOrigemEmpresa']?>
+                        </p>
+                    </section>
+
+                <?php }?>
+
+                <!-- <section class="conteudoHistoria">
                     <h3>No Brasil</h3>
                     <p class="formatarTexto">
-                        
                         No Brasil, a rede é operada desde 2007 pela Arcos Dourados, máster franqueada da marca Honker Burguer em toda a América Latina.
                     </p>
 
@@ -60,15 +92,13 @@
                     <figure class="imagemHistoria">
                         <img src="images/sobreEmpresa/imgFachada.jpg" alt="FACHADA HONKER BURGUER">
                     </figure>
-                </section>
+                </section> -->
             </div>
         </div>
     </div>
     
     <?php include_once("footer.php"); ?>
 
-    <script src="scripts/jquery-1.11.3.min.js"></script>
-    <script src="scripts/sobreEmpresa.js"></script>
-    <script src="scripts/mobile.js"></script>
+    
 </body>
 </html>

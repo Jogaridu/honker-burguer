@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/produtoMes.css">
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/jquery.form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="scripts/produtoMes.js"></script>
+    <script src="scripts/mobile.js"></script>
 </head>
 <body>
     <?php include_once("header.php"); ?>
@@ -116,10 +121,6 @@
         </div>
     </div>
 
-    <?php include_once("footer.php"); ?>
-
-    <script src="scripts/jquery-1.11.3.min.js"></script>
-    <script src="scripts/produtoMes.js"></script>
-    <script src="scripts/mobile.js"></script>
+    <?php include_once("footer.php"); ?>    
 </body>
 </html>
